@@ -79,9 +79,9 @@ def gen_bg():
         d.line([c + r1 * math.cos(a), c + r1 * math.sin(a),
                 c + r2 * math.cos(a), c + r2 * math.sin(a)],
                fill=col, width=(3 if major else 2) * S)
-    for y in (210, 312):
+    for y in (216, 312):
         d.line([60 * S, y * S, 390 * S, y * S], fill=(255, 255, 255, 50), width=1 * S)
-    d.line([65 * S, 208 * S, 385 * S, 208 * S], fill=BLUE, width=2 * S)
+    d.line([65 * S, 214 * S, 385 * S, 214 * S], fill=BLUE, width=2 * S)
     save(img, "bg.png", 450, 450)
 
 
