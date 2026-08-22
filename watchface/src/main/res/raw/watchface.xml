@@ -931,14 +931,14 @@
             <Ellipse x="4" y="46" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
         </PartDraw>
 
-        <ComplicationSlot slotId="1" x="234" y="30" width="110" height="48"
+        <ComplicationSlot slotId="1" x="230" y="28" width="118" height="52"
             supportedTypes="SHORT_TEXT" displayName="Sleep">
             <Variant mode="AMBIENT" target="alpha" value="0" />
             <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
-            <BoundingBox x="0" y="0" width="110" height="48" />
+            <BoundingBox x="0" y="0" width="118" height="52" />
             <Complication type="SHORT_TEXT">
-                <PartImage x="0" y="4" width="40" height="40"><Image resource="@drawable/ic_sleep" /></PartImage>
-                <PartText x="44" y="11" width="66" height="26">
+                <PartImage x="0" y="2" width="48" height="48"><Image resource="@drawable/ic_sleep" /></PartImage>
+                <PartText x="52" y="14" width="66" height="26">
                     <Text align="START"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
                         <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
                     </Font></Text>
