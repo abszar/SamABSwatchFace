@@ -689,8 +689,8 @@
         <DigitalClock x="0" y="100" width="450" height="150">
             <Variant mode="AMBIENT" target="alpha" value="0" />
             <TimeText format="ss" align="START"
-                x="402" y="100" width="48" height="42">
-                <Font family="anton" size="32" color="#ff9ca3af" />
+                x="394" y="100" width="52" height="42">
+                <Font family="anton" size="32" color="#ff3b82f6" />
             </TimeText>
         </DigitalClock>
         <PartDraw x="215" y="148" width="20" height="60">
