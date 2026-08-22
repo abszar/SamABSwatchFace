@@ -616,5 +616,114 @@
                 </PartText>
             </Default>
         </Condition>
+        <!-- Health row: sleep slot | native steps | distance-kcal slot | sleep score slot -->
+        <PartImage x="160" y="318" width="22" height="22"><Image resource="@drawable/ic_shoe" /></PartImage>
+        <PartText x="185" y="322" width="120" height="14">
+            <Text align="START"><Font family="SYNC_TO_DEVICE" size="12" color="#ff9ca3af">STEPS</Font></Text>
+        </PartText>
+        <PartText x="160" y="336" width="130" height="26">
+            <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="23" weight="BOLD" color="#ffffffff">
+                <Template>%d<Parameter expression="[STEP_COUNT]" /></Template>
+            </Font></Text>
+        </PartText>
+        <PartDraw x="165" y="364" width="120" height="6">
+            <Rectangle x="0" y="1" width="120" height="4"><Fill color="#ff1f2937" /></Rectangle>
+            <Rectangle x="0" y="1" width="1" height="4">
+                <Transform target="width" value="clamp([STEP_COUNT] / [STEP_GOAL], 0.0, 1.0) * 120" />
+                <Fill color="#ff3b82f6" />
+            </Rectangle>
+        </PartDraw>
+
+        <ComplicationSlot slotId="1" x="18" y="316" width="128" height="56"
+            supportedTypes="SHORT_TEXT RANGED_VALUE" displayName="Sleep">
+            <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
+            <BoundingBox x="0" y="0" width="128" height="56" />
+            <Complication type="SHORT_TEXT">
+                <PartImage x="2" y="14" width="28" height="28"><Image resource="@drawable/ic_sleep" /></PartImage>
+                <PartText x="34" y="4" width="94" height="14">
+                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="11" color="#ff9ca3af">SLEEP</Font></Text>
+                </PartText>
+                <PartText x="34" y="18" width="94" height="26">
+                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
+                        <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                    </Font></Text>
+                </PartText>
+                <PartText x="34" y="44" width="94" height="12">
+                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="10" color="#ff3b82f6">
+                        <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                    </Font></Text>
+                </PartText>
+            </Complication>
+            <Complication type="RANGED_VALUE">
+                <PartImage x="2" y="14" width="28" height="28"><Image resource="@drawable/ic_sleep" /></PartImage>
+                <PartText x="34" y="4" width="94" height="14">
+                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="11" color="#ff9ca3af">SLEEP</Font></Text>
+                </PartText>
+                <PartText x="34" y="18" width="94" height="26">
+                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
+                        <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                    </Font></Text>
+                </PartText>
+                <PartText x="34" y="44" width="94" height="12">
+                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="10" color="#ff3b82f6">
+                        <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                    </Font></Text>
+                </PartText>
+            </Complication>
+        </ComplicationSlot>
+
+        <ComplicationSlot slotId="2" x="160" y="372" width="130" height="16"
+            supportedTypes="SHORT_TEXT" displayName="Distance or Calories">
+            <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+            <BoundingBox x="0" y="0" width="130" height="16" />
+            <Complication type="SHORT_TEXT">
+                <PartText x="0" y="0" width="130" height="16">
+                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="12" color="#ff9ca3af">
+                        <Template>%s %s<Parameter expression="[COMPLICATION.TEXT]" /><Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                    </Font></Text>
+                </PartText>
+            </Complication>
+        </ComplicationSlot>
+
+        <ComplicationSlot slotId="3" x="304" y="316" width="128" height="56"
+            supportedTypes="RANGED_VALUE SHORT_TEXT" displayName="Sleep score">
+            <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" />
+            <BoundingBox x="0" y="0" width="128" height="56" />
+            <Complication type="RANGED_VALUE">
+                <PartDraw x="2" y="5" width="46" height="46">
+                    <Arc centerX="23" centerY="23" width="40" height="40" startAngle="0" endAngle="360">
+                        <Stroke color="#ff1f2937" thickness="5" />
+                    </Arc>
+                    <Arc centerX="23" centerY="23" width="40" height="40" startAngle="0" endAngle="0">
+                        <Transform target="endAngle" value="([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) * 360" />
+                        <Stroke color="#ff7c5cff" thickness="5" cap="ROUND" />
+                    </Arc>
+                </PartDraw>
+                <PartText x="2" y="20" width="46" height="16">
+                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ffffffff">
+                        <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                    </Font></Text>
+                </PartText>
+                <PartText x="52" y="10" width="76" height="12">
+                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="10" color="#ff9ca3af">SLEEP SCORE</Font></Text>
+                </PartText>
+                <PartText x="52" y="24" width="76" height="16">
+                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="13" color="#ffffffff">
+                        <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
+                    </Font></Text>
+                </PartText>
+            </Complication>
+            <Complication type="SHORT_TEXT">
+                <PartText x="0" y="10" width="128" height="14">
+                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="11" color="#ff9ca3af">SLEEP SCORE</Font></Text>
+                </PartText>
+                <PartText x="0" y="26" width="128" height="24">
+                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="18" weight="BOLD" color="#ffffffff">
+                        <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                    </Font></Text>
+                </PartText>
+            </Complication>
+        </ComplicationSlot>
+
     </Scene>
 </WatchFace>
