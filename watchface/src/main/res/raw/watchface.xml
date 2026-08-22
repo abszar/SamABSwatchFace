@@ -34,56 +34,56 @@
                         <Expression name="thunderHdr"><![CDATA[[WEATHER.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDHdr">
-                            <PartImage x="155" y="30" width="48" height="48">
+                            <PartImage x="110" y="32" width="44" height="44">
                                 <Image resource="@drawable/wx_clear" />
                             </PartImage>
                         </Compare>
                         <Compare expression="clearNHdr">
-                            <PartImage x="155" y="30" width="48" height="48">
+                            <PartImage x="110" y="32" width="44" height="44">
                                 <Image resource="@drawable/wx_night" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyDHdr">
-                            <PartImage x="155" y="30" width="48" height="48">
+                            <PartImage x="110" y="32" width="44" height="44">
                                 <Image resource="@drawable/wx_partly" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyNHdr">
-                            <PartImage x="155" y="30" width="48" height="48">
+                            <PartImage x="110" y="32" width="44" height="44">
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
                         <Compare expression="rainHdr">
-                            <PartImage x="155" y="30" width="48" height="48">
+                            <PartImage x="110" y="32" width="44" height="44">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
                         <Compare expression="snowHdr">
-                            <PartImage x="155" y="30" width="48" height="48">
+                            <PartImage x="110" y="32" width="44" height="44">
                                 <Image resource="@drawable/wx_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderHdr">
-                            <PartImage x="155" y="30" width="48" height="48">
+                            <PartImage x="110" y="32" width="44" height="44">
                                 <Image resource="@drawable/wx_thunder" />
                             </PartImage>
                         </Compare>
                         <Default>
-                            <PartImage x="155" y="30" width="48" height="48">
+                            <PartImage x="110" y="32" width="44" height="44">
                                 <Image resource="@drawable/wx_cloudy" />
                             </PartImage>
                         </Default>
                     </Condition>
-                    <PartText x="208" y="34" width="110" height="46">
+                    <PartText x="158" y="34" width="80" height="42">
                         <Text align="START">
-                            <Font family="SYNC_TO_DEVICE" size="40" weight="BOLD" color="#ffffffff">
+                            <Font family="SYNC_TO_DEVICE" size="36" weight="BOLD" color="#ffffffff">
                                 <Template>%d°<Parameter expression="[WEATHER.TEMPERATURE]" /></Template>
                             </Font>
                         </Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="75" y="40" width="300" height="24">
+                    <PartText x="110" y="44" width="124" height="24">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" color="#ff6b7280">--°</Font></Text>
                     </PartText>
                 </Default>
@@ -95,7 +95,7 @@
                     <Expression name="wxOkRow"><![CDATA[[WEATHER.IS_AVAILABLE]]]></Expression>
                 </Expressions>
                 <Compare expression="wxOkRow">
-                    <PartText x="30" y="248" width="60" height="16">
+                    <PartText x="30" y="290" width="60" height="16">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="13" weight="BOLD" color="#ff3b82f6">@string/now</Font></Text>
                     </PartText>
                     <Condition>
@@ -109,52 +109,52 @@
                         <Expression name="thunderFc0"><![CDATA[[WEATHER.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc0">
-                            <PartImage x="45" y="266" width="30" height="30">
+                            <PartImage x="45" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_clear" />
                             </PartImage>
                         </Compare>
                         <Compare expression="clearNFc0">
-                            <PartImage x="45" y="266" width="30" height="30">
+                            <PartImage x="45" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyDFc0">
-                            <PartImage x="45" y="266" width="30" height="30">
+                            <PartImage x="45" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_partly" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyNFc0">
-                            <PartImage x="45" y="266" width="30" height="30">
+                            <PartImage x="45" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
                         <Compare expression="rainFc0">
-                            <PartImage x="45" y="266" width="30" height="30">
+                            <PartImage x="45" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
                         <Compare expression="snowFc0">
-                            <PartImage x="45" y="266" width="30" height="30">
+                            <PartImage x="45" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc0">
-                            <PartImage x="45" y="266" width="30" height="30">
+                            <PartImage x="45" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_thunder" />
                             </PartImage>
                         </Compare>
                         <Default>
-                            <PartImage x="45" y="266" width="30" height="30">
+                            <PartImage x="45" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_cloudy" />
                             </PartImage>
                         </Default>
                     </Condition>
-                    <PartText x="30" y="296" width="60" height="18">
+                    <PartText x="30" y="340" width="60" height="18">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffffffff">
                             <Template>%d°<Parameter expression="[WEATHER.TEMPERATURE]" /></Template>
                         </Font></Text>
                     </PartText>
-                    <PartText x="96" y="248" width="60" height="16">
+                    <PartText x="96" y="290" width="60" height="16">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#ff3b82f6">
                             <Template>%d:00<Parameter expression="([HOUR_0_23] + 1) % 24" /></Template>
                         </Font></Text>
@@ -170,52 +170,52 @@
                         <Expression name="thunderFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc1">
-                            <PartImage x="111" y="266" width="30" height="30">
+                            <PartImage x="111" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_clear" />
                             </PartImage>
                         </Compare>
                         <Compare expression="clearNFc1">
-                            <PartImage x="111" y="266" width="30" height="30">
+                            <PartImage x="111" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyDFc1">
-                            <PartImage x="111" y="266" width="30" height="30">
+                            <PartImage x="111" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_partly" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyNFc1">
-                            <PartImage x="111" y="266" width="30" height="30">
+                            <PartImage x="111" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
                         <Compare expression="rainFc1">
-                            <PartImage x="111" y="266" width="30" height="30">
+                            <PartImage x="111" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
                         <Compare expression="snowFc1">
-                            <PartImage x="111" y="266" width="30" height="30">
+                            <PartImage x="111" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc1">
-                            <PartImage x="111" y="266" width="30" height="30">
+                            <PartImage x="111" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_thunder" />
                             </PartImage>
                         </Compare>
                         <Default>
-                            <PartImage x="111" y="266" width="30" height="30">
+                            <PartImage x="111" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_cloudy" />
                             </PartImage>
                         </Default>
                     </Condition>
-                    <PartText x="96" y="296" width="60" height="18">
+                    <PartText x="96" y="340" width="60" height="18">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffffffff">
                             <Template>%d°<Parameter expression="[WEATHER.HOURS.1.TEMPERATURE]" /></Template>
                         </Font></Text>
                     </PartText>
-                    <PartText x="162" y="248" width="60" height="16">
+                    <PartText x="162" y="290" width="60" height="16">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#ff3b82f6">
                             <Template>%d:00<Parameter expression="([HOUR_0_23] + 2) % 24" /></Template>
                         </Font></Text>
@@ -231,52 +231,52 @@
                         <Expression name="thunderFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc2">
-                            <PartImage x="177" y="266" width="30" height="30">
+                            <PartImage x="177" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_clear" />
                             </PartImage>
                         </Compare>
                         <Compare expression="clearNFc2">
-                            <PartImage x="177" y="266" width="30" height="30">
+                            <PartImage x="177" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyDFc2">
-                            <PartImage x="177" y="266" width="30" height="30">
+                            <PartImage x="177" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_partly" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyNFc2">
-                            <PartImage x="177" y="266" width="30" height="30">
+                            <PartImage x="177" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
                         <Compare expression="rainFc2">
-                            <PartImage x="177" y="266" width="30" height="30">
+                            <PartImage x="177" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
                         <Compare expression="snowFc2">
-                            <PartImage x="177" y="266" width="30" height="30">
+                            <PartImage x="177" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc2">
-                            <PartImage x="177" y="266" width="30" height="30">
+                            <PartImage x="177" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_thunder" />
                             </PartImage>
                         </Compare>
                         <Default>
-                            <PartImage x="177" y="266" width="30" height="30">
+                            <PartImage x="177" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_cloudy" />
                             </PartImage>
                         </Default>
                     </Condition>
-                    <PartText x="162" y="296" width="60" height="18">
+                    <PartText x="162" y="340" width="60" height="18">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffffffff">
                             <Template>%d°<Parameter expression="[WEATHER.HOURS.2.TEMPERATURE]" /></Template>
                         </Font></Text>
                     </PartText>
-                    <PartText x="228" y="248" width="60" height="16">
+                    <PartText x="228" y="290" width="60" height="16">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#ff3b82f6">
                             <Template>%d:00<Parameter expression="([HOUR_0_23] + 3) % 24" /></Template>
                         </Font></Text>
@@ -292,52 +292,52 @@
                         <Expression name="thunderFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc3">
-                            <PartImage x="243" y="266" width="30" height="30">
+                            <PartImage x="243" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_clear" />
                             </PartImage>
                         </Compare>
                         <Compare expression="clearNFc3">
-                            <PartImage x="243" y="266" width="30" height="30">
+                            <PartImage x="243" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyDFc3">
-                            <PartImage x="243" y="266" width="30" height="30">
+                            <PartImage x="243" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_partly" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyNFc3">
-                            <PartImage x="243" y="266" width="30" height="30">
+                            <PartImage x="243" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
                         <Compare expression="rainFc3">
-                            <PartImage x="243" y="266" width="30" height="30">
+                            <PartImage x="243" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
                         <Compare expression="snowFc3">
-                            <PartImage x="243" y="266" width="30" height="30">
+                            <PartImage x="243" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc3">
-                            <PartImage x="243" y="266" width="30" height="30">
+                            <PartImage x="243" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_thunder" />
                             </PartImage>
                         </Compare>
                         <Default>
-                            <PartImage x="243" y="266" width="30" height="30">
+                            <PartImage x="243" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_cloudy" />
                             </PartImage>
                         </Default>
                     </Condition>
-                    <PartText x="228" y="296" width="60" height="18">
+                    <PartText x="228" y="340" width="60" height="18">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffffffff">
                             <Template>%d°<Parameter expression="[WEATHER.HOURS.3.TEMPERATURE]" /></Template>
                         </Font></Text>
                     </PartText>
-                    <PartText x="294" y="248" width="60" height="16">
+                    <PartText x="294" y="290" width="60" height="16">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#ff3b82f6">
                             <Template>%d:00<Parameter expression="([HOUR_0_23] + 4) % 24" /></Template>
                         </Font></Text>
@@ -353,52 +353,52 @@
                         <Expression name="thunderFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc4">
-                            <PartImage x="309" y="266" width="30" height="30">
+                            <PartImage x="309" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_clear" />
                             </PartImage>
                         </Compare>
                         <Compare expression="clearNFc4">
-                            <PartImage x="309" y="266" width="30" height="30">
+                            <PartImage x="309" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyDFc4">
-                            <PartImage x="309" y="266" width="30" height="30">
+                            <PartImage x="309" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_partly" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyNFc4">
-                            <PartImage x="309" y="266" width="30" height="30">
+                            <PartImage x="309" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
                         <Compare expression="rainFc4">
-                            <PartImage x="309" y="266" width="30" height="30">
+                            <PartImage x="309" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
                         <Compare expression="snowFc4">
-                            <PartImage x="309" y="266" width="30" height="30">
+                            <PartImage x="309" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc4">
-                            <PartImage x="309" y="266" width="30" height="30">
+                            <PartImage x="309" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_thunder" />
                             </PartImage>
                         </Compare>
                         <Default>
-                            <PartImage x="309" y="266" width="30" height="30">
+                            <PartImage x="309" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_cloudy" />
                             </PartImage>
                         </Default>
                     </Condition>
-                    <PartText x="294" y="296" width="60" height="18">
+                    <PartText x="294" y="340" width="60" height="18">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffffffff">
                             <Template>%d°<Parameter expression="[WEATHER.HOURS.4.TEMPERATURE]" /></Template>
                         </Font></Text>
                     </PartText>
-                    <PartText x="360" y="248" width="60" height="16">
+                    <PartText x="360" y="290" width="60" height="16">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#ff3b82f6">
                             <Template>%d:00<Parameter expression="([HOUR_0_23] + 5) % 24" /></Template>
                         </Font></Text>
@@ -414,47 +414,47 @@
                         <Expression name="thunderFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc5">
-                            <PartImage x="375" y="266" width="30" height="30">
+                            <PartImage x="375" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_clear" />
                             </PartImage>
                         </Compare>
                         <Compare expression="clearNFc5">
-                            <PartImage x="375" y="266" width="30" height="30">
+                            <PartImage x="375" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyDFc5">
-                            <PartImage x="375" y="266" width="30" height="30">
+                            <PartImage x="375" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_partly" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyNFc5">
-                            <PartImage x="375" y="266" width="30" height="30">
+                            <PartImage x="375" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
                         <Compare expression="rainFc5">
-                            <PartImage x="375" y="266" width="30" height="30">
+                            <PartImage x="375" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
                         <Compare expression="snowFc5">
-                            <PartImage x="375" y="266" width="30" height="30">
+                            <PartImage x="375" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc5">
-                            <PartImage x="375" y="266" width="30" height="30">
+                            <PartImage x="375" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_thunder" />
                             </PartImage>
                         </Compare>
                         <Default>
-                            <PartImage x="375" y="266" width="30" height="30">
+                            <PartImage x="375" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_cloudy" />
                             </PartImage>
                         </Default>
                     </Condition>
-                    <PartText x="360" y="296" width="60" height="18">
+                    <PartText x="360" y="340" width="60" height="18">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffffffff">
                             <Template>%d°<Parameter expression="[WEATHER.HOURS.5.TEMPERATURE]" /></Template>
                         </Font></Text>
@@ -468,17 +468,17 @@
                     <Expression name="isDay2"><![CDATA[[DAY_OF_WEEK] == 2]]></Expression>
                 </Expressions>
                 <Compare expression="isDay2">
-                    <PartDraw x="38" y="218" width="50" height="28">
+                    <PartDraw x="38" y="256" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartText x="36" y="222" width="54" height="20">
+                    <PartText x="36" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day2</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="36" y="222" width="54" height="20">
+                    <PartText x="36" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day2</Font></Text>
                     </PartText>
                 </Default>
@@ -488,17 +488,17 @@
                     <Expression name="isDay3"><![CDATA[[DAY_OF_WEEK] == 3]]></Expression>
                 </Expressions>
                 <Compare expression="isDay3">
-                    <PartDraw x="92" y="218" width="50" height="28">
+                    <PartDraw x="92" y="256" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartText x="90" y="222" width="54" height="20">
+                    <PartText x="90" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day3</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="90" y="222" width="54" height="20">
+                    <PartText x="90" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day3</Font></Text>
                     </PartText>
                 </Default>
@@ -508,17 +508,17 @@
                     <Expression name="isDay4"><![CDATA[[DAY_OF_WEEK] == 4]]></Expression>
                 </Expressions>
                 <Compare expression="isDay4">
-                    <PartDraw x="146" y="218" width="50" height="28">
+                    <PartDraw x="146" y="256" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartText x="144" y="222" width="54" height="20">
+                    <PartText x="144" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day4</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="144" y="222" width="54" height="20">
+                    <PartText x="144" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day4</Font></Text>
                     </PartText>
                 </Default>
@@ -528,17 +528,17 @@
                     <Expression name="isDay5"><![CDATA[[DAY_OF_WEEK] == 5]]></Expression>
                 </Expressions>
                 <Compare expression="isDay5">
-                    <PartDraw x="200" y="218" width="50" height="28">
+                    <PartDraw x="200" y="256" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartText x="198" y="222" width="54" height="20">
+                    <PartText x="198" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day5</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="198" y="222" width="54" height="20">
+                    <PartText x="198" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day5</Font></Text>
                     </PartText>
                 </Default>
@@ -548,17 +548,17 @@
                     <Expression name="isDay6"><![CDATA[[DAY_OF_WEEK] == 6]]></Expression>
                 </Expressions>
                 <Compare expression="isDay6">
-                    <PartDraw x="254" y="218" width="50" height="28">
+                    <PartDraw x="254" y="256" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartText x="252" y="222" width="54" height="20">
+                    <PartText x="252" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day6</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="252" y="222" width="54" height="20">
+                    <PartText x="252" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day6</Font></Text>
                     </PartText>
                 </Default>
@@ -568,17 +568,17 @@
                     <Expression name="isDay7"><![CDATA[[DAY_OF_WEEK] == 7]]></Expression>
                 </Expressions>
                 <Compare expression="isDay7">
-                    <PartDraw x="308" y="218" width="50" height="28">
+                    <PartDraw x="308" y="256" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartText x="306" y="222" width="54" height="20">
+                    <PartText x="306" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day7</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="306" y="222" width="54" height="20">
+                    <PartText x="306" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day7</Font></Text>
                     </PartText>
                 </Default>
@@ -588,38 +588,21 @@
                     <Expression name="isDay1"><![CDATA[[DAY_OF_WEEK] == 1]]></Expression>
                 </Expressions>
                 <Compare expression="isDay1">
-                    <PartDraw x="362" y="218" width="50" height="28">
+                    <PartDraw x="362" y="256" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartText x="360" y="222" width="54" height="20">
+                    <PartText x="360" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day1</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="360" y="222" width="54" height="20">
+                    <PartText x="360" y="260" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day1</Font></Text>
                     </PartText>
                 </Default>
             </Condition>
-            <!-- Health row: sleep slot | native steps | distance-kcal slot | sleep score slot -->
-            <PartImage x="160" y="318" width="22" height="22"><Image resource="@drawable/ic_shoe" /></PartImage>
-            <PartText x="185" y="322" width="120" height="14">
-                <Text align="START"><Font family="SYNC_TO_DEVICE" size="12" color="#ff9ca3af">STEPS</Font></Text>
-            </PartText>
-            <PartText x="160" y="336" width="130" height="26">
-                <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="23" weight="BOLD" color="#ffffffff">
-                    <Template>%d<Parameter expression="[STEP_COUNT]" /></Template>
-                </Font></Text>
-            </PartText>
-            <PartDraw x="165" y="364" width="120" height="6">
-                <Rectangle x="0" y="1" width="120" height="4"><Fill color="#ff1f2937" /></Rectangle>
-                <Rectangle x="0" y="1" width="1" height="4">
-                    <Transform target="width" value="clamp([STEP_COUNT] / [STEP_GOAL], 0.0, 1.0) * 120" />
-                    <Fill color="#ff3b82f6" />
-                </Rectangle>
-            </PartDraw>
 
 
 
@@ -670,7 +653,12 @@
                 <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="9" color="#ff9ca3af">WATCH</Font></Text>
             </PartText>
 
-            <PartImage x="212" y="392" width="26" height="26"><Image resource="@drawable/ic_link" /></PartImage>
+            <PartImage x="213" y="374" width="24" height="24"><Image resource="@drawable/ic_shoe" /></PartImage>
+            <PartText x="175" y="400" width="100" height="26">
+                <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="22" weight="BOLD" color="#ffffffff">
+                    <Template>%d<Parameter expression="[STEP_COUNT]" /></Template>
+                </Font></Text>
+            </PartText>
 
             <!-- Phone battery slot -->
 
@@ -687,101 +675,45 @@
         </PartText>
 
         <!-- Time: blue hours, white minutes, blue colon -->
-        <DigitalClock x="0" y="100" width="450" height="116">
+        <DigitalClock x="0" y="100" width="450" height="150">
             <Variant mode="AMBIENT" target="alpha" value="150" />
             <TimeText format="hh" hourFormat="SYNC_TO_DEVICE" align="END"
-                x="0" y="0" width="206" height="116">
-                <Font family="anton" size="110" color="#ff3b82f6" />
+                x="0" y="0" width="206" height="150">
+                <Font family="anton" size="140" color="#ff3b82f6" />
             </TimeText>
             <TimeText format="mm" align="START"
-                x="244" y="0" width="206" height="116">
-                <Font family="anton" size="110" color="#ffffffff" />
+                x="244" y="0" width="206" height="150">
+                <Font family="anton" size="140" color="#ffffffff" />
             </TimeText>
         </DigitalClock>
-        <DigitalClock x="0" y="100" width="450" height="116">
+        <DigitalClock x="0" y="100" width="450" height="150">
             <Variant mode="AMBIENT" target="alpha" value="0" />
             <TimeText format="ss" align="START"
-                x="374" y="62" width="70" height="44">
-                <Font family="anton" size="36" color="#ff9ca3af" />
+                x="402" y="100" width="48" height="42">
+                <Font family="anton" size="32" color="#ff9ca3af" />
             </TimeText>
         </DigitalClock>
-        <PartDraw x="215" y="134" width="20" height="60">
+        <PartDraw x="215" y="148" width="20" height="60">
             <Variant mode="AMBIENT" target="alpha" value="150" />
             <Ellipse x="4" y="4" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
-            <Ellipse x="4" y="40" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
+            <Ellipse x="4" y="46" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
         </PartDraw>
 
-        <ComplicationSlot slotId="1" x="18" y="316" width="128" height="56"
+        <ComplicationSlot slotId="1" x="240" y="34" width="100" height="46"
             supportedTypes="SHORT_TEXT" displayName="Sleep">
             <Variant mode="AMBIENT" target="alpha" value="0" />
             <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
-            <BoundingBox x="0" y="0" width="128" height="56" />
+            <BoundingBox x="0" y="0" width="100" height="46" />
             <Complication type="SHORT_TEXT">
-                <PartImage x="2" y="14" width="28" height="28"><Image resource="@drawable/ic_sleep" /></PartImage>
-                <PartText x="34" y="4" width="94" height="14">
-                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="11" color="#ff9ca3af">SLEEP</Font></Text>
-                </PartText>
-                <PartText x="34" y="18" width="94" height="26">
+                <PartImage x="0" y="12" width="22" height="22"><Image resource="@drawable/ic_sleep" /></PartImage>
+                <PartText x="26" y="2" width="74" height="26">
                     <Text align="START"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
                         <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
                     </Font></Text>
                 </PartText>
-                <PartText x="34" y="44" width="94" height="12">
-                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="10" color="#ff3b82f6">
+                <PartText x="26" y="30" width="74" height="12">
+                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="9" color="#ff3b82f6">
                         <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
-                    </Font></Text>
-                </PartText>
-            </Complication>
-        </ComplicationSlot>
-        <ComplicationSlot slotId="2" x="160" y="372" width="130" height="16"
-            supportedTypes="SHORT_TEXT" displayName="Distance or Calories">
-            <Variant mode="AMBIENT" target="alpha" value="0" />
-            <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
-            <BoundingBox x="0" y="0" width="130" height="16" />
-            <Complication type="SHORT_TEXT">
-                <PartText x="0" y="0" width="130" height="16">
-                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="12" color="#ff9ca3af">
-                        <Template>%s %s<Parameter expression="[COMPLICATION.TEXT]" /><Parameter expression="[COMPLICATION.TITLE]" /></Template>
-                    </Font></Text>
-                </PartText>
-            </Complication>
-        </ComplicationSlot>
-        <ComplicationSlot slotId="3" x="304" y="316" width="128" height="56"
-            supportedTypes="RANGED_VALUE SHORT_TEXT" displayName="Sleep score">
-            <Variant mode="AMBIENT" target="alpha" value="0" />
-            <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" />
-            <BoundingBox x="0" y="0" width="128" height="56" />
-            <Complication type="RANGED_VALUE">
-                <PartDraw x="2" y="5" width="46" height="46">
-                    <Arc centerX="23" centerY="23" width="40" height="40" startAngle="0" endAngle="360">
-                        <Stroke color="#ff1f2937" thickness="5" />
-                    </Arc>
-                    <Arc centerX="23" centerY="23" width="40" height="40" startAngle="0" endAngle="0">
-                        <Transform target="endAngle" value="([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) * 360" />
-                        <Stroke color="#ff7c5cff" thickness="5" cap="ROUND" />
-                    </Arc>
-                </PartDraw>
-                <PartText x="2" y="20" width="46" height="16">
-                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ffffffff">
-                        <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
-                    </Font></Text>
-                </PartText>
-                <PartText x="52" y="10" width="76" height="12">
-                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="10" color="#ff9ca3af">SLEEP SCORE</Font></Text>
-                </PartText>
-                <PartText x="52" y="24" width="76" height="16">
-                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="13" color="#ffffffff">
-                        <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
-                    </Font></Text>
-                </PartText>
-            </Complication>
-            <Complication type="SHORT_TEXT">
-                <PartText x="0" y="10" width="128" height="14">
-                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="11" color="#ff9ca3af">SLEEP SCORE</Font></Text>
-                </PartText>
-                <PartText x="0" y="26" width="128" height="24">
-                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="18" weight="BOLD" color="#ffffffff">
-                        <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
                     </Font></Text>
                 </PartText>
             </Complication>
