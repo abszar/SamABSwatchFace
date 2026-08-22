@@ -79,11 +79,6 @@ def gen_bg():
         d.line([c + r1 * math.cos(a), c + r1 * math.sin(a),
                 c + r2 * math.cos(a), c + r2 * math.sin(a)],
                fill=col, width=(3 if major else 2) * S)
-    box = [c - 218 * S, c - 218 * S, c + 218 * S, c + 218 * S]
-    d.arc(box, 200, 265, fill=BLUE, width=4 * S)
-    d.arc(box, 275, 340, fill=BLUE, width=4 * S)
-    d.arc(box, 30, 85, fill=BLUE, width=4 * S)
-    d.arc(box, 95, 150, fill=BLUE, width=4 * S)
     for y in (210, 312):
         d.line([60 * S, y * S, 390 * S, y * S], fill=(255, 255, 255, 50), width=1 * S)
     d.line([65 * S, 208 * S, 385 * S, 208 * S], fill=BLUE, width=2 * S)

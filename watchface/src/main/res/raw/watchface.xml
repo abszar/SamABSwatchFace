@@ -632,8 +632,8 @@
             </PartDraw>
             <Condition>
                 <Expressions>
-                    <Expression name="wbLow"><![CDATA[[BATTERY_PERCENT] <= 15]]></Expression>
-                    <Expression name="wbMid"><![CDATA[[BATTERY_PERCENT] > 15 && [BATTERY_PERCENT] <= 40]]></Expression>
+                    <Expression name="wbLow"><![CDATA[[BATTERY_PERCENT] <= 20]]></Expression>
+                    <Expression name="wbMid"><![CDATA[[BATTERY_PERCENT] > 20 && [BATTERY_PERCENT] <= 50]]></Expression>
                 </Expressions>
                 <Compare expression="wbLow">
                     <PartDraw x="120" y="372" width="64" height="64">
@@ -647,7 +647,7 @@
                     <PartDraw x="120" y="372" width="64" height="64">
                         <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
                             <Transform target="endAngle" value="[BATTERY_PERCENT] * 3.6" />
-                            <Stroke color="#fff59e0b" thickness="6" cap="ROUND" />
+                            <Stroke color="#ffeab308" thickness="6" cap="ROUND" />
                         </Arc>
                     </PartDraw>
                 </Compare>
@@ -677,7 +677,7 @@
         </Group>
 
         <!-- Date -->
-        <PartText x="25" y="96" width="400" height="24">
+        <PartText x="25" y="90" width="400" height="18">
             <Variant mode="AMBIENT" target="alpha" value="140" />
             <Text align="CENTER">
                 <Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
@@ -687,7 +687,7 @@
         </PartText>
 
         <!-- Time: blue hours, white minutes, blue colon -->
-        <DigitalClock x="0" y="118" width="450" height="92">
+        <DigitalClock x="0" y="106" width="450" height="104">
             <Variant mode="AMBIENT" target="alpha" value="150" />
             <TimeText format="hh" hourFormat="SYNC_TO_DEVICE" align="END"
                 x="0" y="0" width="206" height="92">
@@ -698,34 +698,18 @@
                 <Font family="SYNC_TO_DEVICE" size="88" weight="BOLD" color="#ffffffff" />
             </TimeText>
         </DigitalClock>
-        <PartDraw x="215" y="138" width="20" height="60">
+        <PartDraw x="215" y="134" width="20" height="60">
             <Variant mode="AMBIENT" target="alpha" value="150" />
             <Ellipse x="4" y="4" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
             <Ellipse x="4" y="40" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
         </PartDraw>
 
         <ComplicationSlot slotId="1" x="18" y="316" width="128" height="56"
-            supportedTypes="SHORT_TEXT RANGED_VALUE" displayName="Sleep">
+            supportedTypes="SHORT_TEXT" displayName="Sleep">
             <Variant mode="AMBIENT" target="alpha" value="0" />
             <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
             <BoundingBox x="0" y="0" width="128" height="56" />
             <Complication type="SHORT_TEXT">
-                <PartImage x="2" y="14" width="28" height="28"><Image resource="@drawable/ic_sleep" /></PartImage>
-                <PartText x="34" y="4" width="94" height="14">
-                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="11" color="#ff9ca3af">SLEEP</Font></Text>
-                </PartText>
-                <PartText x="34" y="18" width="94" height="26">
-                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
-                        <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
-                    </Font></Text>
-                </PartText>
-                <PartText x="34" y="44" width="94" height="12">
-                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="10" color="#ff3b82f6">
-                        <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
-                    </Font></Text>
-                </PartText>
-            </Complication>
-            <Complication type="RANGED_VALUE">
                 <PartImage x="2" y="14" width="28" height="28"><Image resource="@drawable/ic_sleep" /></PartImage>
                 <PartText x="34" y="4" width="94" height="14">
                     <Text align="START"><Font family="SYNC_TO_DEVICE" size="11" color="#ff9ca3af">SLEEP</Font></Text>
@@ -805,11 +789,37 @@
                     <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="360">
                         <Stroke color="#ff1f2937" thickness="6" />
                     </Arc>
-                    <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
-                        <Transform target="endAngle" value="([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) * 360" />
-                        <Stroke color="#ff3b82f6" thickness="6" cap="ROUND" />
-                    </Arc>
                 </PartDraw>
+                <Condition>
+                    <Expressions>
+                        <Expression name="pbLow"><![CDATA[([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) <= 0.2]]></Expression>
+                        <Expression name="pbMid"><![CDATA[([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) > 0.2 && ([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) <= 0.5]]></Expression>
+                    </Expressions>
+                    <Compare expression="pbLow">
+                        <PartDraw x="0" y="0" width="64" height="64">
+                            <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                                <Transform target="endAngle" value="([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) * 360" />
+                                <Stroke color="#ffef4444" thickness="6" cap="ROUND" />
+                            </Arc>
+                        </PartDraw>
+                    </Compare>
+                    <Compare expression="pbMid">
+                        <PartDraw x="0" y="0" width="64" height="64">
+                            <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                                <Transform target="endAngle" value="([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) * 360" />
+                                <Stroke color="#ffeab308" thickness="6" cap="ROUND" />
+                            </Arc>
+                        </PartDraw>
+                    </Compare>
+                    <Default>
+                        <PartDraw x="0" y="0" width="64" height="64">
+                            <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                                <Transform target="endAngle" value="([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) * 360" />
+                                <Stroke color="#ff3b82f6" thickness="6" cap="ROUND" />
+                            </Arc>
+                        </PartDraw>
+                    </Default>
+                </Condition>
                 <PartImage x="24" y="8" width="16" height="16"><Image resource="@drawable/ic_phone" /></PartImage>
                 <PartText x="0" y="24" width="64" height="24">
                     <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
