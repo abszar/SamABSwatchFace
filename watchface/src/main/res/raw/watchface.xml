@@ -468,18 +468,18 @@
                     <Expression name="isDay2"><![CDATA[[DAY_OF_WEEK] == 2]]></Expression>
                 </Expressions>
                 <Compare expression="isDay2">
-                    <PartDraw x="38" y="256" width="50" height="28">
+                    <PartDraw x="38" y="248" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartImage x="55" y="286" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
-                    <PartText x="36" y="260" width="54" height="20">
+                    <PartImage x="55" y="276" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
+                    <PartText x="36" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day2</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="36" y="260" width="54" height="20">
+                    <PartText x="36" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day2</Font></Text>
                     </PartText>
                 </Default>
@@ -489,18 +489,18 @@
                     <Expression name="isDay3"><![CDATA[[DAY_OF_WEEK] == 3]]></Expression>
                 </Expressions>
                 <Compare expression="isDay3">
-                    <PartDraw x="92" y="256" width="50" height="28">
+                    <PartDraw x="92" y="248" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartImage x="109" y="286" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
-                    <PartText x="90" y="260" width="54" height="20">
+                    <PartImage x="109" y="276" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
+                    <PartText x="90" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day3</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="90" y="260" width="54" height="20">
+                    <PartText x="90" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day3</Font></Text>
                     </PartText>
                 </Default>
@@ -510,18 +510,18 @@
                     <Expression name="isDay4"><![CDATA[[DAY_OF_WEEK] == 4]]></Expression>
                 </Expressions>
                 <Compare expression="isDay4">
-                    <PartDraw x="146" y="256" width="50" height="28">
+                    <PartDraw x="146" y="248" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartImage x="163" y="286" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
-                    <PartText x="144" y="260" width="54" height="20">
+                    <PartImage x="163" y="276" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
+                    <PartText x="144" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day4</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="144" y="260" width="54" height="20">
+                    <PartText x="144" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day4</Font></Text>
                     </PartText>
                 </Default>
@@ -531,18 +531,18 @@
                     <Expression name="isDay5"><![CDATA[[DAY_OF_WEEK] == 5]]></Expression>
                 </Expressions>
                 <Compare expression="isDay5">
-                    <PartDraw x="200" y="256" width="50" height="28">
+                    <PartDraw x="200" y="248" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartImage x="217" y="286" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
-                    <PartText x="198" y="260" width="54" height="20">
+                    <PartImage x="217" y="276" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
+                    <PartText x="198" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day5</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="198" y="260" width="54" height="20">
+                    <PartText x="198" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day5</Font></Text>
                     </PartText>
                 </Default>
@@ -552,18 +552,18 @@
                     <Expression name="isDay6"><![CDATA[[DAY_OF_WEEK] == 6]]></Expression>
                 </Expressions>
                 <Compare expression="isDay6">
-                    <PartDraw x="254" y="256" width="50" height="28">
+                    <PartDraw x="254" y="248" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartImage x="271" y="286" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
-                    <PartText x="252" y="260" width="54" height="20">
+                    <PartImage x="271" y="276" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
+                    <PartText x="252" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day6</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="252" y="260" width="54" height="20">
+                    <PartText x="252" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day6</Font></Text>
                     </PartText>
                 </Default>
@@ -573,18 +573,18 @@
                     <Expression name="isDay7"><![CDATA[[DAY_OF_WEEK] == 7]]></Expression>
                 </Expressions>
                 <Compare expression="isDay7">
-                    <PartDraw x="308" y="256" width="50" height="28">
+                    <PartDraw x="308" y="248" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartImage x="325" y="286" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
-                    <PartText x="306" y="260" width="54" height="20">
+                    <PartImage x="325" y="276" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
+                    <PartText x="306" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day7</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="306" y="260" width="54" height="20">
+                    <PartText x="306" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day7</Font></Text>
                     </PartText>
                 </Default>
@@ -594,18 +594,18 @@
                     <Expression name="isDay1"><![CDATA[[DAY_OF_WEEK] == 1]]></Expression>
                 </Expressions>
                 <Compare expression="isDay1">
-                    <PartDraw x="362" y="256" width="50" height="28">
+                    <PartDraw x="362" y="248" width="50" height="28">
                         <RoundRectangle x="1" y="1" width="48" height="26" cornerRadiusX="13" cornerRadiusY="13">
                             <Stroke color="#ff3b82f6" thickness="2" />
                         </RoundRectangle>
                     </PartDraw>
-                    <PartImage x="379" y="286" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
-                    <PartText x="360" y="260" width="54" height="20">
+                    <PartImage x="379" y="276" width="16" height="8"><Image resource="@drawable/tri_down" /></PartImage>
+                    <PartText x="360" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" weight="BOLD" color="#ff3b82f6">@string/day1</Font></Text>
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="360" y="260" width="54" height="20">
+                    <PartText x="360" y="252" width="54" height="20">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">@string/day1</Font></Text>
                     </PartText>
                 </Default>
