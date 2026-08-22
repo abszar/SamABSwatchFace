@@ -218,7 +218,7 @@ def main():
     gen_ic_shoe()
     gen_ic_watch()
     gen_ic_phone()
-    gen_ic_sleep()
+    # ic_sleep now comes from the user-provided moon sheet
 
 
 if __name__ == "__main__":
