@@ -82,7 +82,21 @@ def gen_bg():
     for y in (254, 362):
         d.line([60 * S, y * S, 390 * S, y * S], fill=(255, 255, 255, 50), width=1 * S)
     d.line([65 * S, 252 * S, 385 * S, 252 * S], fill=BLUE, width=2 * S)
+    SEP = (255, 255, 255, 50)
+    d.line([225 * S, 34 * S, 225 * S, 74 * S], fill=SEP, width=1 * S)      # weather | sleep
+    d.line([45 * S, 289 * S, 405 * S, 289 * S], fill=SEP, width=1 * S)     # under day strip
+    for x in (93, 159, 225, 291, 357):                                     # forecast columns
+        d.line([x * S, 294 * S, x * S, 354 * S], fill=SEP, width=1 * S)
+    for x in (193, 257):                                                   # bottom row
+        d.line([x * S, 380 * S, x * S, 428 * S], fill=SEP, width=1 * S)
     save(img, "bg.png", 450, 450)
+
+
+def gen_tri_down():
+    img = canvas(16, 8)
+    d = ImageDraw.Draw(img)
+    d.polygon([(1 * S, 1 * S), (15 * S, 1 * S), (8 * S, 7 * S)], fill=BLUE)
+    save(img, "tri_down.png", 16, 8)
 
 
 def gen_wx_clear():
@@ -200,6 +214,7 @@ def gen_ic_sleep():
 def main():
     RES.mkdir(parents=True, exist_ok=True)
     gen_bg()
+    gen_tri_down()
     gen_wx_clear()
     gen_wx_partly()
     gen_wx_cloudy()
