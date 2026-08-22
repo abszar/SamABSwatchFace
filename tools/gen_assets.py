@@ -79,10 +79,10 @@ def gen_bg():
         d.line([c + r1 * math.cos(a), c + r1 * math.sin(a),
                 c + r2 * math.cos(a), c + r2 * math.sin(a)],
                fill=col, width=(3 if major else 2) * S)
-    d.line([60 * S, 362 * S, 390 * S, 362 * S], fill=(255, 255, 255, 50), width=1 * S)
+    d.line([60 * S, 366 * S, 390 * S, 366 * S], fill=(255, 255, 255, 50), width=1 * S)
     SEP = (255, 255, 255, 50)
     d.line([225 * S, 34 * S, 225 * S, 74 * S], fill=SEP, width=1 * S)      # weather | sleep
-    d.line([45 * S, 289 * S, 405 * S, 289 * S], fill=SEP, width=1 * S)     # under day strip
+    d.line([45 * S, 285 * S, 405 * S, 285 * S], fill=SEP, width=1 * S)     # under day strip
     for x in (93, 159, 225, 291, 357):                                     # forecast columns
         d.line([x * S, 300 * S, x * S, 350 * S], fill=SEP, width=1 * S)
     for x in (193, 257):                                                   # bottom row
