@@ -677,7 +677,7 @@
         </Group>
 
         <!-- Date -->
-        <PartText x="25" y="90" width="400" height="18">
+        <PartText x="25" y="82" width="400" height="18">
             <Variant mode="AMBIENT" target="alpha" value="140" />
             <Text align="CENTER">
                 <Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">
@@ -687,18 +687,18 @@
         </PartText>
 
         <!-- Time: blue hours, white minutes, blue colon -->
-        <DigitalClock x="0" y="106" width="450" height="104">
+        <DigitalClock x="0" y="100" width="450" height="110">
             <Variant mode="AMBIENT" target="alpha" value="150" />
             <TimeText format="hh" hourFormat="SYNC_TO_DEVICE" align="END"
-                x="0" y="0" width="206" height="104">
-                <Font family="anton" size="100" color="#ff3b82f6" />
+                x="0" y="0" width="206" height="110">
+                <Font family="anton" size="106" color="#ff3b82f6" />
             </TimeText>
             <TimeText format="mm" align="START"
-                x="244" y="0" width="206" height="104">
-                <Font family="anton" size="100" color="#ffffffff" />
+                x="244" y="0" width="206" height="110">
+                <Font family="anton" size="106" color="#ffffffff" />
             </TimeText>
         </DigitalClock>
-        <PartDraw x="215" y="134" width="20" height="60">
+        <PartDraw x="215" y="131" width="20" height="60">
             <Variant mode="AMBIENT" target="alpha" value="150" />
             <Ellipse x="4" y="4" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
             <Ellipse x="4" y="40" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
