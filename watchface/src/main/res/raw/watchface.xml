@@ -725,5 +725,91 @@
             </Complication>
         </ComplicationSlot>
 
+        <!-- Watch battery gauge -->
+        <PartDraw x="120" y="372" width="64" height="64">
+            <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="360">
+                <Stroke color="#ff1f2937" thickness="6" />
+            </Arc>
+        </PartDraw>
+        <Condition>
+            <Expressions>
+                <Expression name="wbLow"><![CDATA[[BATTERY_PERCENT] <= 15]]></Expression>
+                <Expression name="wbMid"><![CDATA[[BATTERY_PERCENT] > 15 && [BATTERY_PERCENT] <= 40]]></Expression>
+            </Expressions>
+            <Compare expression="wbLow">
+                <PartDraw x="120" y="372" width="64" height="64">
+                    <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                        <Transform target="endAngle" value="[BATTERY_PERCENT] * 3.6" />
+                        <Stroke color="#ffef4444" thickness="6" cap="ROUND" />
+                    </Arc>
+                </PartDraw>
+            </Compare>
+            <Compare expression="wbMid">
+                <PartDraw x="120" y="372" width="64" height="64">
+                    <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                        <Transform target="endAngle" value="[BATTERY_PERCENT] * 3.6" />
+                        <Stroke color="#fff59e0b" thickness="6" cap="ROUND" />
+                    </Arc>
+                </PartDraw>
+            </Compare>
+            <Default>
+                <PartDraw x="120" y="372" width="64" height="64">
+                    <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                        <Transform target="endAngle" value="[BATTERY_PERCENT] * 3.6" />
+                        <Stroke color="#ff3b82f6" thickness="6" cap="ROUND" />
+                    </Arc>
+                </PartDraw>
+            </Default>
+        </Condition>
+        <PartImage x="144" y="380" width="16" height="16"><Image resource="@drawable/ic_watch" /></PartImage>
+        <PartText x="120" y="396" width="64" height="24">
+            <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
+                <Template>%d%%<Parameter expression="[BATTERY_PERCENT]" /></Template>
+            </Font></Text>
+        </PartText>
+        <PartText x="120" y="420" width="64" height="12">
+            <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="9" color="#ff9ca3af">WATCH</Font></Text>
+        </PartText>
+
+        <PartImage x="212" y="392" width="26" height="26"><Image resource="@drawable/ic_link" /></PartImage>
+
+        <!-- Phone battery slot -->
+        <ComplicationSlot slotId="4" x="266" y="372" width="64" height="64"
+            supportedTypes="RANGED_VALUE SHORT_TEXT" displayName="Phone battery">
+            <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" />
+            <BoundingOval x="0" y="0" width="64" height="64" />
+            <Complication type="RANGED_VALUE">
+                <PartDraw x="0" y="0" width="64" height="64">
+                    <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="360">
+                        <Stroke color="#ff1f2937" thickness="6" />
+                    </Arc>
+                    <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                        <Transform target="endAngle" value="([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) * 360" />
+                        <Stroke color="#ff3b82f6" thickness="6" cap="ROUND" />
+                    </Arc>
+                </PartDraw>
+                <PartImage x="24" y="8" width="16" height="16"><Image resource="@drawable/ic_phone" /></PartImage>
+                <PartText x="0" y="24" width="64" height="24">
+                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
+                        <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                    </Font></Text>
+                </PartText>
+                <PartText x="0" y="48" width="64" height="12">
+                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="9" color="#ff9ca3af">PHONE</Font></Text>
+                </PartText>
+            </Complication>
+            <Complication type="SHORT_TEXT">
+                <PartImage x="24" y="8" width="16" height="16"><Image resource="@drawable/ic_phone" /></PartImage>
+                <PartText x="0" y="24" width="64" height="24">
+                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
+                        <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+                    </Font></Text>
+                </PartText>
+                <PartText x="0" y="48" width="64" height="12">
+                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="9" color="#ff9ca3af">PHONE</Font></Text>
+                </PartText>
+            </Complication>
+        </ComplicationSlot>
+
     </Scene>
 </WatchFace>
