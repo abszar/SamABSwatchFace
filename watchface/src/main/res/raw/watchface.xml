@@ -941,7 +941,7 @@
             <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
             <BoundingBox x="0" y="0" width="118" height="52" />
             <Complication type="SHORT_TEXT">
-                <PartImage x="0" y="2" width="48" height="48"><Image resource="@drawable/ic_sleep" /></PartImage>
+                <PartImage x="2" y="6" width="40" height="40"><Image resource="@drawable/ic_sleep" /></PartImage>
                 <PartText x="46" y="14" width="72" height="26">
                     <Text align="START"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
                         <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
