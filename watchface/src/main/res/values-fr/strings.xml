@@ -1,0 +1,10 @@
+<resources>
+    <string name="day1">DIM</string>
+    <string name="day2">LUN</string>
+    <string name="day3">MAR</string>
+    <string name="day4">MER</string>
+    <string name="day5">JEU</string>
+    <string name="day6">VEN</string>
+    <string name="day7">SAM</string>
+    <string name="now">MTN</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SamAB Face</string>
+    <string name="day1">SUN</string>
+    <string name="day2">MON</string>
+    <string name="day3">TUE</string>
+    <string name="day4">WED</string>
+    <string name="day5">THU</string>
+    <string name="day6">FRI</string>
+    <string name="day7">SAT</string>
+    <string name="now">NOW</string>
+</resources>
