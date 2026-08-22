@@ -665,11 +665,27 @@
         </Group>
 
         <!-- Date -->
-        <PartText x="25" y="82" width="400" height="18">
+        <PartText x="0" y="82" width="150" height="20">
+            <Variant mode="AMBIENT" target="alpha" value="140" />
+            <Text align="END">
+                <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
+                    <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
+                </Font>
+            </Text>
+        </PartText>
+        <PartText x="154" y="82" width="142" height="20">
             <Variant mode="AMBIENT" target="alpha" value="140" />
             <Text align="CENTER">
-                <Font family="SYNC_TO_DEVICE" size="15" color="#ffd1d5db">
+                <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ffffffff">
                     <Template>%s %s<Parameter expression="[DAY]" /><Parameter expression="[MONTH_F]" /></Template>
+                </Font>
+            </Text>
+        </PartText>
+        <PartText x="300" y="82" width="150" height="20">
+            <Variant mode="AMBIENT" target="alpha" value="140" />
+            <Text align="START">
+                <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
+                    <Template>%d<Parameter expression="[YEAR]" /></Template>
                 </Font>
             </Text>
         </PartText>
