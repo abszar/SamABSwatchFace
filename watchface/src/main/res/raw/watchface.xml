@@ -5,6 +5,78 @@
         <PartImage x="0" y="0" width="450" height="450">
             <Image resource="@drawable/bg" />
         </PartImage>
+        <!-- Current weather header -->
+        <Condition>
+            <Expressions>
+                <Expression name="wxOk"><![CDATA[[WEATHER.IS_AVAILABLE]]]></Expression>
+            </Expressions>
+            <Compare expression="wxOk">
+                <Condition>
+                    <Expressions>
+                    <Expression name="clearDHdr"><![CDATA[([WEATHER.CONDITION] == 1 || [WEATHER.CONDITION] == 8) && [WEATHER.IS_DAY]]]></Expression>
+                    <Expression name="clearNHdr"><![CDATA[([WEATHER.CONDITION] == 1 || [WEATHER.CONDITION] == 8) && ![WEATHER.IS_DAY]]]></Expression>
+                    <Expression name="partlyDHdr"><![CDATA[([WEATHER.CONDITION] == 14 || [WEATHER.CONDITION] == 15) && [WEATHER.IS_DAY]]]></Expression>
+                    <Expression name="partlyNHdr"><![CDATA[([WEATHER.CONDITION] == 14 || [WEATHER.CONDITION] == 15) && ![WEATHER.IS_DAY]]]></Expression>
+                    <Expression name="rainHdr"><![CDATA[[WEATHER.CONDITION] == 4 || [WEATHER.CONDITION] == 6 || [WEATHER.CONDITION] == 12]]></Expression>
+                    <Expression name="snowHdr"><![CDATA[[WEATHER.CONDITION] == 5 || [WEATHER.CONDITION] == 7 || [WEATHER.CONDITION] == 10 || [WEATHER.CONDITION] == 11]]></Expression>
+                    <Expression name="thunderHdr"><![CDATA[[WEATHER.CONDITION] == 9]]></Expression>
+                    </Expressions>
+                    <Compare expression="clearDHdr">
+                        <PartImage x="155" y="30" width="48" height="48">
+                            <Image resource="@drawable/wx_clear" />
+                        </PartImage>
+                    </Compare>
+                    <Compare expression="clearNHdr">
+                        <PartImage x="155" y="30" width="48" height="48">
+                            <Image resource="@drawable/wx_night" />
+                        </PartImage>
+                    </Compare>
+                    <Compare expression="partlyDHdr">
+                        <PartImage x="155" y="30" width="48" height="48">
+                            <Image resource="@drawable/wx_partly" />
+                        </PartImage>
+                    </Compare>
+                    <Compare expression="partlyNHdr">
+                        <PartImage x="155" y="30" width="48" height="48">
+                            <Image resource="@drawable/wx_night_cloud" />
+                        </PartImage>
+                    </Compare>
+                    <Compare expression="rainHdr">
+                        <PartImage x="155" y="30" width="48" height="48">
+                            <Image resource="@drawable/wx_rain" />
+                        </PartImage>
+                    </Compare>
+                    <Compare expression="snowHdr">
+                        <PartImage x="155" y="30" width="48" height="48">
+                            <Image resource="@drawable/wx_snow" />
+                        </PartImage>
+                    </Compare>
+                    <Compare expression="thunderHdr">
+                        <PartImage x="155" y="30" width="48" height="48">
+                            <Image resource="@drawable/wx_thunder" />
+                        </PartImage>
+                    </Compare>
+                    <Default>
+                        <PartImage x="155" y="30" width="48" height="48">
+                            <Image resource="@drawable/wx_cloudy" />
+                        </PartImage>
+                    </Default>
+                </Condition>
+                <PartText x="208" y="34" width="110" height="46">
+                    <Text align="START">
+                        <Font family="SYNC_TO_DEVICE" size="40" weight="BOLD" color="#ffffffff">
+                            <Template>%d°<Parameter expression="[WEATHER.TEMPERATURE]" /></Template>
+                        </Font>
+                    </Text>
+                </PartText>
+            </Compare>
+            <Default>
+                <PartText x="75" y="40" width="300" height="24">
+                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" color="#ff6b7280">--°</Font></Text>
+                </PartText>
+            </Default>
+        </Condition>
+
         <!-- Date -->
         <PartText x="25" y="96" width="400" height="24">
             <Text align="CENTER">
