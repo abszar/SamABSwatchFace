@@ -2,6 +2,9 @@
     <Metadata key="CLOCK_TYPE" value="DIGITAL" />
     <Metadata key="PREVIEW_TIME" value="17:34:20" />
     <Scene backgroundColor="#ff000000">
+        <PartImage x="0" y="0" width="450" height="450">
+            <Image resource="@drawable/bg" />
+        </PartImage>
         <DigitalClock x="0" y="150" width="450" height="120">
             <TimeText format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER"
                 x="0" y="0" width="450" height="120">
