@@ -2,4 +2,6 @@
     <Preview value="@drawable/preview" />
     <Category value="CATEGORY_EMPTY" />
     <AvailableInRetail value="false" />
+    <Editable value="true" />
+    <MultipleInstancesAllowed value="false" />
 </WatchFaceInfo>
