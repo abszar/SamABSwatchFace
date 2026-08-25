@@ -9,7 +9,7 @@ android {
         applicationId = "com.abszar.samabwatchface"
         minSdk = 33
         targetSdk = 34
-        versionCode = 27
-        versionName = "1.6"
+        versionCode = 28
+        versionName = "1.7"
     }
 }
