@@ -908,15 +908,15 @@
             <Ellipse x="4" y="46" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
         </PartDraw>
 
-        <ComplicationSlot slotId="1" x="228" y="46" width="136" height="66"
+        <ComplicationSlot slotId="1" x="228" y="46" width="142" height="66"
             supportedTypes="SHORT_TEXT" displayName="Sleep">
             <Variant mode="AMBIENT" target="alpha" value="0" />
             <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
-            <BoundingBox x="0" y="0" width="136" height="66" />
+            <BoundingBox x="0" y="0" width="142" height="66" />
             <Complication type="SHORT_TEXT">
                 <PartImage x="0" y="6" width="44" height="44"><Image resource="@drawable/ic_sleep" /></PartImage>
-                <PartText x="48" y="14" width="88" height="30">
-                    <Text align="START"><Font family="clockdigits" size="20" color="#ffffffff">
+                <PartText x="48" y="19" width="94" height="30">
+                    <Text align="START"><Font family="clockdigits" size="23" color="#ffffffff">
                         <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
                     </Font></Text>
                 </PartText>
