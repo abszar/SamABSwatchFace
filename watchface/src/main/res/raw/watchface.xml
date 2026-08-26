@@ -1208,22 +1208,22 @@
         <DigitalClock x="0" y="100" width="450" height="150">
             <Variant mode="AMBIENT" target="alpha" value="150" />
             <TimeText format="hh" hourFormat="SYNC_TO_DEVICE" align="END"
-                x="0" y="0" width="206" height="150">
-                <Font family="clockdigits" size="140" color="#ff3b82f6" />
+                x="0" y="0" width="183" height="150">
+                <Font family="clockdigits" size="112" color="#ff3b82f6" />
             </TimeText>
             <TimeText format="mm" align="START"
-                x="244" y="0" width="206" height="150">
-                <Font family="clockdigits" size="140" color="#ffffffff" />
+                x="217" y="0" width="206" height="150">
+                <Font family="clockdigits" size="112" color="#ffffffff" />
             </TimeText>
         </DigitalClock>
         <DigitalClock x="0" y="100" width="450" height="150">
             <Variant mode="AMBIENT" target="alpha" value="0" />
             <TimeText format="ss" align="START"
-                x="389" y="100" width="57" height="42">
-                <Font family="clockdigits" size="32" color="#ff3b82f6" />
+                x="381" y="84" width="50" height="40">
+                <Font family="clockdigits" size="30" color="#ff3b82f6" />
             </TimeText>
         </DigitalClock>
-        <PartDraw x="215" y="148" width="20" height="60">
+        <PartDraw x="190" y="144" width="20" height="60">
             <Variant mode="AMBIENT" target="alpha" value="150" />
             <Ellipse x="4" y="4" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
             <Ellipse x="4" y="46" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>

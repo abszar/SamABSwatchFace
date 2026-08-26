@@ -24,7 +24,7 @@ OUT = ROOT.parent / "watchface/src/main/res/font/clockdigits.ttf"
 
 UPM = 1000
 DIGIT_HEIGHT = 700        # baseline to top of a digit, in font units
-SIDE_BEARING = 20         # padding either side of the widest digit
+SIDE_BEARING = 8          # padding either side of the widest digit
 INK_MAX_LUMA = 128        # the sheet is dark ink on a light checkerboard
 ROW_GAP = 20              # min blank rows separating the two digit rows
 MIN_ROW_FRACTION = 0.2    # a digit row is tall; the stray colon sample is not
