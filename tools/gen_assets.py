@@ -82,9 +82,9 @@ def gen_bg():
     d.line([60 * S, 366 * S, 390 * S, 366 * S], fill=(255, 255, 255, 150), width=1 * S)
     SEP = (255, 255, 255, 150)
     d.line([225 * S, 30 * S, 225 * S, 78 * S], fill=(255, 255, 255, 150), width=1 * S)  # weather | sleep
-    d.line([45 * S, 285 * S, 405 * S, 285 * S], fill=SEP, width=1 * S)     # under day strip
-    for x in (93, 159, 225, 291, 357):                                     # forecast columns
-        d.line([x * S, 300 * S, x * S, 350 * S], fill=SEP, width=1 * S)
+    d.line([45 * S, 269 * S, 405 * S, 269 * S], fill=SEP, width=1 * S)     # under day strip
+    for x in (108, 186, 264, 342):                                         # forecast columns
+        d.line([x * S, 292 * S, x * S, 356 * S], fill=SEP, width=1 * S)
     for x in (193, 257):                                                   # bottom row
         d.line([x * S, 380 * S, x * S, 428 * S], fill=SEP, width=1 * S)
     save(img, "bg.png", 450, 450)
