@@ -81,7 +81,7 @@ def gen_bg():
                fill=col, width=(3 if major else 2) * S)
     d.line([60 * S, 366 * S, 390 * S, 366 * S], fill=(255, 255, 255, 150), width=1 * S)
     SEP = (255, 255, 255, 150)
-    d.line([225 * S, 30 * S, 225 * S, 78 * S], fill=(255, 255, 255, 150), width=1 * S)  # weather | sleep
+    d.line([225 * S, 42 * S, 225 * S, 112 * S], fill=(255, 255, 255, 150), width=1 * S)  # weather | sleep
     d.line([45 * S, 269 * S, 405 * S, 269 * S], fill=SEP, width=1 * S)     # under day strip
     for x in (108, 186, 264, 342):                                         # forecast columns
         d.line([x * S, 292 * S, x * S, 356 * S], fill=SEP, width=1 * S)
@@ -171,6 +171,16 @@ def gen_ic_link():
     save(img, "ic_link.png")
 
 
+def gen_ic_pin():
+    """Map pin for the city label."""
+    img = canvas(32, 32)
+    d = ImageDraw.Draw(img)
+    d.ellipse([6 * S, 2 * S, 26 * S, 22 * S], fill=BLUE)
+    d.polygon([(9 * S, 17 * S), (23 * S, 17 * S), (16 * S, 30 * S)], fill=BLUE)
+    d.ellipse([12 * S, 8 * S, 20 * S, 16 * S], fill=(0, 0, 0, 0))
+    save(img, "ic_pin.png", 32, 32)
+
+
 def gen_ic_shoe():
     img = canvas()
     d = ImageDraw.Draw(img)
@@ -215,6 +225,7 @@ def main():
     gen_tri_down()
     # wx_* icons now come from slice_weather_icons.py (user-provided sheet)
     gen_ic_link()
+    gen_ic_pin()
     gen_ic_shoe()
     gen_ic_watch()
     gen_ic_phone()

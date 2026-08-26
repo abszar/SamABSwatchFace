@@ -12,9 +12,9 @@
             <!-- Seconds bezel dot -->
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" angle="0" name="secondsDot">
                 <Transform target="angle" value="[SECOND] * 6" />
-                <PartDraw x="222" y="2" width="6" height="20">
-                    <RoundRectangle x="0" y="0" width="6" height="20"
-                        cornerRadiusX="3" cornerRadiusY="3"><Fill color="#fffacc15" /></RoundRectangle>
+                <PartDraw x="220" y="2" width="10" height="21">
+                    <RoundRectangle x="0" y="0" width="10" height="21"
+                        cornerRadiusX="5" cornerRadiusY="5"><Fill color="#fffacc15" /></RoundRectangle>
                 </PartDraw>
             </Group>
 
@@ -42,82 +42,82 @@
                         <Expression name="thunderHdr"><![CDATA[[WEATHER.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_clear" />
                             </PartImage>
                         </Compare>
                         <Compare expression="clearNHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_night" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyDHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_partly" />
                             </PartImage>
                         </Compare>
                         <Compare expression="partlyNHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
                         <Compare expression="fogHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_fog" />
                             </PartImage>
                         </Compare>
                         <Compare expression="windyHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_windy" />
                             </PartImage>
                         </Compare>
                         <Compare expression="lightRainHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_light_rain" />
                             </PartImage>
                         </Compare>
                         <Compare expression="rainHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
                         <Compare expression="heavyRainHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_heavy_rain" />
                             </PartImage>
                         </Compare>
                         <Compare expression="sleetHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_sleet" />
                             </PartImage>
                         </Compare>
                         <Compare expression="lightSnowHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_light_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="snowHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="heavySnowHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_heavy_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderHdr">
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_thunder" />
                             </PartImage>
                         </Compare>
                         <Default>
-                            <PartImage x="110" y="32" width="44" height="44">
+                            <PartImage x="112" y="46" width="46" height="46">
                                 <Image resource="@drawable/wx_cloudy" />
                             </PartImage>
                         </Default>
                     </Condition>
-                    <PartText x="158" y="34" width="80" height="42">
+                    <PartText x="162" y="54" width="72" height="44">
                         <Text align="START">
                             <Font family="SYNC_TO_DEVICE" size="36" weight="BOLD" color="#ffffffff">
                                 <Template>%d°<Parameter expression="[WEATHER.TEMPERATURE]" /></Template>
@@ -126,11 +126,23 @@
                     </PartText>
                 </Compare>
                 <Default>
-                    <PartText x="110" y="44" width="124" height="24">
+                    <PartText x="140" y="58" width="124" height="24">
                         <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="16" color="#ff6b7280">--°</Font></Text>
                     </PartText>
                 </Default>
             </Condition>
+
+            <!-- City (static: Watch Face Format exposes no location source) -->
+            <PartImage x="114" y="96" width="14" height="14">
+                <Variant mode="AMBIENT" target="alpha" value="0" />
+                <Image resource="@drawable/ic_pin" />
+            </PartImage>
+            <PartText x="132" y="95" width="88" height="16">
+                <Variant mode="AMBIENT" target="alpha" value="0" />
+                <Text align="START">
+                    <Font family="SYNC_TO_DEVICE" size="12" color="#ffffffff">@string/city</Font>
+                </Text>
+            </PartText>
 
             <!-- Hourly forecast row -->
             <Condition>
@@ -860,250 +872,24 @@
 
         </Group>
 
-        <!-- Date -->
-        <PartText x="154" y="82" width="142" height="20">
+        <!-- Date: one line, three styles, centred as a whole -->
+        <PartText x="25" y="114" width="400" height="22">
             <Variant mode="AMBIENT" target="alpha" value="140" />
             <Text align="CENTER">
+                <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
+                    <Template>%s, <Parameter expression="[DAY_OF_WEEK_F]" /></Template>
+                </Font>
                 <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ffffffff">
-                    <Template>%s %s<Parameter expression="[DAY]" /><Parameter expression="[MONTH_F]" /></Template>
+                    <Template>%s %s  <Parameter expression="[DAY]" /><Parameter expression="[MONTH_F]" /></Template>
+                </Font>
+                <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
+                    <Template>%d<Parameter expression="[YEAR]" /></Template>
                 </Font>
             </Text>
         </PartText>
-        <Condition>
-            <Expressions>
-                <Expression name="mo1"><![CDATA[[MONTH] == 1]]></Expression>
-                <Expression name="mo2"><![CDATA[[MONTH] == 2]]></Expression>
-                <Expression name="mo3"><![CDATA[[MONTH] == 3]]></Expression>
-                <Expression name="mo4"><![CDATA[[MONTH] == 4]]></Expression>
-                <Expression name="mo5"><![CDATA[[MONTH] == 5]]></Expression>
-                <Expression name="mo6"><![CDATA[[MONTH] == 6]]></Expression>
-                <Expression name="mo7"><![CDATA[[MONTH] == 7]]></Expression>
-                <Expression name="mo8"><![CDATA[[MONTH] == 8]]></Expression>
-                <Expression name="mo9"><![CDATA[[MONTH] == 9]]></Expression>
-                <Expression name="mo10"><![CDATA[[MONTH] == 10]]></Expression>
-                <Expression name="mo11"><![CDATA[[MONTH] == 11]]></Expression>
-                <Expression name="mo12"><![CDATA[[MONTH] == 12]]></Expression>
-            </Expressions>
-            <Compare expression="mo1">
-                <PartText x="0" y="82" width="171" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="279" y="82" width="171" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Compare expression="mo2">
-                <PartText x="0" y="82" width="166" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="284" y="82" width="166" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Compare expression="mo3">
-                <PartText x="0" y="82" width="180" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="270" y="82" width="180" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Compare expression="mo4">
-                <PartText x="0" y="82" width="180" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="270" y="82" width="180" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Compare expression="mo5">
-                <PartText x="0" y="82" width="189" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="261" y="82" width="189" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Compare expression="mo6">
-                <PartText x="0" y="82" width="185" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="265" y="82" width="185" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Compare expression="mo7">
-                <PartText x="0" y="82" width="185" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="265" y="82" width="185" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Compare expression="mo8">
-                <PartText x="0" y="82" width="175" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="275" y="82" width="175" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Compare expression="mo9">
-                <PartText x="0" y="82" width="161" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="289" y="82" width="161" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Compare expression="mo10">
-                <PartText x="0" y="82" width="171" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="279" y="82" width="171" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Compare expression="mo11">
-                <PartText x="0" y="82" width="166" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="284" y="82" width="166" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Compare expression="mo12">
-                <PartText x="0" y="82" width="166" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="END">
-                        <Font family="SYNC_TO_DEVICE" size="16" weight="BOLD" color="#ff3b82f6">
-                            <Template>%s,<Parameter expression="[DAY_OF_WEEK_F]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-                <PartText x="284" y="82" width="166" height="20">
-                    <Variant mode="AMBIENT" target="alpha" value="140" />
-                    <Text align="START">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff9ca3af">
-                            <Template>%d<Parameter expression="[YEAR]" /></Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-        </Condition>
 
         <!-- Time: blue hours, white minutes, blue colon -->
-        <DigitalClock x="0" y="100" width="450" height="150">
+        <DigitalClock x="0" y="106" width="450" height="150">
             <Variant mode="AMBIENT" target="alpha" value="150" />
             <TimeText format="hh" hourFormat="SYNC_TO_DEVICE" align="END"
                 x="0" y="0" width="183" height="150">
@@ -1114,28 +900,28 @@
                 <Font family="clockdigits" size="112" color="#ffffffff" />
             </TimeText>
         </DigitalClock>
-        <DigitalClock x="0" y="100" width="450" height="150">
+        <DigitalClock x="0" y="106" width="450" height="150">
             <Variant mode="AMBIENT" target="alpha" value="0" />
             <TimeText format="ss" align="START"
                 x="381" y="84" width="50" height="40">
                 <Font family="clockdigits" size="30" color="#ff3b82f6" />
             </TimeText>
         </DigitalClock>
-        <PartDraw x="190" y="144" width="20" height="60">
+        <PartDraw x="190" y="150" width="20" height="60">
             <Variant mode="AMBIENT" target="alpha" value="150" />
             <Ellipse x="4" y="4" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
             <Ellipse x="4" y="46" width="12" height="12"><Fill color="#ff3b82f6" /></Ellipse>
         </PartDraw>
 
-        <ComplicationSlot slotId="1" x="230" y="28" width="118" height="52"
+        <ComplicationSlot slotId="1" x="232" y="46" width="128" height="46"
             supportedTypes="SHORT_TEXT" displayName="Sleep">
             <Variant mode="AMBIENT" target="alpha" value="0" />
             <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
-            <BoundingBox x="0" y="0" width="118" height="52" />
+            <BoundingBox x="0" y="0" width="128" height="46" />
             <Complication type="SHORT_TEXT">
-                <PartImage x="2" y="6" width="40" height="40"><Image resource="@drawable/ic_sleep" /></PartImage>
-                <PartText x="46" y="14" width="72" height="26">
-                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
+                <PartImage x="0" y="0" width="46" height="46"><Image resource="@drawable/ic_sleep" /></PartImage>
+                <PartText x="52" y="8" width="76" height="30">
+                    <Text align="START"><Font family="SYNC_TO_DEVICE" size="21" weight="BOLD" color="#ffffffff">
                         <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
                     </Font></Text>
                 </PartText>
