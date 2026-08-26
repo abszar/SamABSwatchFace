@@ -819,8 +819,8 @@
 
 
             <!-- Watch battery gauge -->
-            <PartDraw x="120" y="372" width="64" height="64">
-                <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="360">
+            <PartDraw x="119" y="365" width="70" height="70">
+                <Arc centerX="35" centerY="35" width="62" height="62" startAngle="0" endAngle="360">
                     <Stroke color="#ff1f2937" thickness="6" />
                 </Arc>
             </PartDraw>
@@ -830,38 +830,41 @@
                     <Expression name="wbMid"><![CDATA[[BATTERY_PERCENT] > 20 && [BATTERY_PERCENT] <= 50]]></Expression>
                 </Expressions>
                 <Compare expression="wbLow">
-                    <PartDraw x="120" y="372" width="64" height="64">
-                        <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                    <PartDraw x="119" y="365" width="70" height="70">
+                        <Arc centerX="35" centerY="35" width="62" height="62" startAngle="0" endAngle="0">
                             <Transform target="endAngle" value="[BATTERY_PERCENT] * 3.6" />
                             <Stroke color="#ffef4444" thickness="6" cap="ROUND" />
                         </Arc>
                     </PartDraw>
                 </Compare>
                 <Compare expression="wbMid">
-                    <PartDraw x="120" y="372" width="64" height="64">
-                        <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                    <PartDraw x="119" y="365" width="70" height="70">
+                        <Arc centerX="35" centerY="35" width="62" height="62" startAngle="0" endAngle="0">
                             <Transform target="endAngle" value="[BATTERY_PERCENT] * 3.6" />
                             <Stroke color="#ffeab308" thickness="6" cap="ROUND" />
                         </Arc>
                     </PartDraw>
                 </Compare>
                 <Default>
-                    <PartDraw x="120" y="372" width="64" height="64">
-                        <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                    <PartDraw x="119" y="365" width="70" height="70">
+                        <Arc centerX="35" centerY="35" width="62" height="62" startAngle="0" endAngle="0">
                             <Transform target="endAngle" value="[BATTERY_PERCENT] * 3.6" />
                             <Stroke color="#ff3b82f6" thickness="6" cap="ROUND" />
                         </Arc>
                     </PartDraw>
                 </Default>
             </Condition>
-            <PartImage x="142" y="376" width="20" height="20"><Image resource="@drawable/ic_watch" /></PartImage>
-            <PartText x="120" y="396" width="64" height="24">
-                <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
-                    <Template>%d%%<Parameter expression="[BATTERY_PERCENT]" /></Template>
-                </Font></Text>
+            <PartImage x="144" y="376" width="21" height="21"><Image resource="@drawable/ic_watch" /></PartImage>
+            <PartText x="119" y="398" width="70" height="26">
+                <Text align="CENTER">
+                    <Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
+                        <Template>%d<Parameter expression="[BATTERY_PERCENT]" /></Template>
+                    </Font>
+                    <Font family="SYNC_TO_DEVICE" size="12" weight="BOLD" color="#ffffffff">%</Font>
+                </Text>
             </PartText>
 
-            <PartImage x="212" y="372" width="26" height="26"><Image resource="@drawable/ic_shoe" /></PartImage>
+            <PartImage x="209" y="368" width="32" height="32"><Image resource="@drawable/ic_shoe" /></PartImage>
             <PartText x="175" y="400" width="100" height="26">
                 <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="22" weight="BOLD" color="#ffffffff">
                     <Template>%d<Parameter expression="[STEP_COUNT]" /></Template>
@@ -932,14 +935,14 @@
                 </PartText>
             </Complication>
         </ComplicationSlot>
-        <ComplicationSlot slotId="4" x="266" y="372" width="64" height="64"
+        <ComplicationSlot slotId="4" x="261" y="365" width="70" height="70"
             supportedTypes="RANGED_VALUE SHORT_TEXT" displayName="Phone battery">
             <Variant mode="AMBIENT" target="alpha" value="0" />
             <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" />
-            <BoundingOval x="0" y="0" width="64" height="64" />
+            <BoundingOval x="0" y="0" width="70" height="70" />
             <Complication type="RANGED_VALUE">
-                <PartDraw x="0" y="0" width="64" height="64">
-                    <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="360">
+                <PartDraw x="0" y="0" width="70" height="70">
+                    <Arc centerX="35" centerY="35" width="62" height="62" startAngle="0" endAngle="360">
                         <Stroke color="#ff1f2937" thickness="6" />
                     </Arc>
                 </PartDraw>
@@ -949,41 +952,44 @@
                         <Expression name="pbMid"><![CDATA[([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) > 0.2 && ([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) <= 0.5]]></Expression>
                     </Expressions>
                     <Compare expression="pbLow">
-                        <PartDraw x="0" y="0" width="64" height="64">
-                            <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                        <PartDraw x="0" y="0" width="70" height="70">
+                            <Arc centerX="35" centerY="35" width="62" height="62" startAngle="0" endAngle="0">
                                 <Transform target="endAngle" value="([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) * 360" />
                                 <Stroke color="#ffef4444" thickness="6" cap="ROUND" />
                             </Arc>
                         </PartDraw>
                     </Compare>
                     <Compare expression="pbMid">
-                        <PartDraw x="0" y="0" width="64" height="64">
-                            <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                        <PartDraw x="0" y="0" width="70" height="70">
+                            <Arc centerX="35" centerY="35" width="62" height="62" startAngle="0" endAngle="0">
                                 <Transform target="endAngle" value="([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) * 360" />
                                 <Stroke color="#ffeab308" thickness="6" cap="ROUND" />
                             </Arc>
                         </PartDraw>
                     </Compare>
                     <Default>
-                        <PartDraw x="0" y="0" width="64" height="64">
-                            <Arc centerX="32" centerY="32" width="56" height="56" startAngle="0" endAngle="0">
+                        <PartDraw x="0" y="0" width="70" height="70">
+                            <Arc centerX="35" centerY="35" width="62" height="62" startAngle="0" endAngle="0">
                                 <Transform target="endAngle" value="([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) * 360" />
                                 <Stroke color="#ff3b82f6" thickness="6" cap="ROUND" />
                             </Arc>
                         </PartDraw>
                     </Default>
                 </Condition>
-                <PartImage x="22" y="4" width="20" height="20"><Image resource="@drawable/ic_phone" /></PartImage>
-                <PartText x="0" y="24" width="64" height="24">
-                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
-                        <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
-                    </Font></Text>
+                <PartImage x="25" y="11" width="21" height="21"><Image resource="@drawable/ic_phone" /></PartImage>
+                <PartText x="0" y="33" width="70" height="26">
+                    <Text align="CENTER">
+                        <Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
+                            <Template>%d<Parameter expression="([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]) * 100" /></Template>
+                        </Font>
+                        <Font family="SYNC_TO_DEVICE" size="12" weight="BOLD" color="#ffffffff">%</Font>
+                    </Text>
                 </PartText>
             </Complication>
             <Complication type="SHORT_TEXT">
-                <PartImage x="22" y="4" width="20" height="20"><Image resource="@drawable/ic_phone" /></PartImage>
-                <PartText x="0" y="24" width="64" height="24">
-                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="20" weight="BOLD" color="#ffffffff">
+                <PartImage x="25" y="11" width="21" height="21"><Image resource="@drawable/ic_phone" /></PartImage>
+                <PartText x="0" y="33" width="70" height="26">
+                    <Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="17" weight="BOLD" color="#ffffffff">
                         <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
                     </Font></Text>
                 </PartText>

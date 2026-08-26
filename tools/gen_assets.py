@@ -79,7 +79,7 @@ def gen_bg():
         d.line([c + r1 * math.cos(a), c + r1 * math.sin(a),
                 c + r2 * math.cos(a), c + r2 * math.sin(a)],
                fill=col, width=(3 if major else 2) * S)
-    d.line([60 * S, 366 * S, 390 * S, 366 * S], fill=(255, 255, 255, 150), width=1 * S)
+    d.line([60 * S, 360 * S, 390 * S, 360 * S], fill=(255, 255, 255, 150), width=1 * S)
     SEP = (255, 255, 255, 150)
     d.line([225 * S, 42 * S, 225 * S, 112 * S], fill=(255, 255, 255, 150), width=1 * S)  # weather | sleep
     d.line([45 * S, 269 * S, 405 * S, 269 * S], fill=SEP, width=1 * S)     # under day strip
@@ -226,9 +226,7 @@ def main():
     # wx_* icons now come from slice_weather_icons.py (user-provided sheet)
     gen_ic_link()
     gen_ic_pin()
-    gen_ic_shoe()
-    gen_ic_watch()
-    gen_ic_phone()
+    # ic_watch / ic_phone / ic_shoe now come from slice_bottom_icons.py
     # ic_sleep now comes from the user-provided moon sheet
 
 
