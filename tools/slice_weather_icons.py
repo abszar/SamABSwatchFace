@@ -18,17 +18,21 @@ COLS, ROWS = 6, 4
 OUT_SIZE = 96
 ALPHA_FLOOR = 40      # below this a pixel is treated as background
 MIN_BLOB = 150       # px; anything smaller is cut-out noise
+PAD_RATIO = 0.05     # breathing room around a glyph, as a fraction of its size
+BLUE = (59, 130, 246)
 
-# (row, col) -> output drawable
+# (row, col) -> output drawable, plus per-icon overrides:
+#   pad   - shrink the margin so a wide glyph fills more of the square
+#   blue  - repaint the sheet's yellow sun in the face's accent blue
 MAPPING = {
-    (0, 0): "wx_clear.png",        # sun
-    (0, 1): "wx_partly.png",       # sun behind cloud
-    (0, 3): "wx_cloudy.png",       # plain cloud
-    (1, 1): "wx_rain.png",         # cloud + two drops
-    (1, 5): "wx_snow.png",         # cloud + snowflakes
-    (2, 2): "wx_thunder.png",      # cloud + bolt + drop
-    (3, 3): "wx_night.png",        # crescent + sparkles
-    (3, 5): "wx_night_cloud.png",  # crescent + cloud
+    (0, 0): ("wx_clear.png", {}),                        # sun
+    (0, 2): ("wx_partly.png", {"pad": 0.0, "blue": True}),  # big cloud + sun
+    (0, 3): ("wx_cloudy.png", {}),                       # plain cloud
+    (1, 1): ("wx_rain.png", {}),                         # cloud + two drops
+    (1, 5): ("wx_snow.png", {}),                         # cloud + snowflakes
+    (2, 2): ("wx_thunder.png", {}),                      # cloud + bolt + drop
+    (3, 3): ("wx_night.png", {}),                        # crescent + sparkles
+    (3, 5): ("wx_night_cloud.png", {}),                  # crescent + cloud
 }
 
 
@@ -73,7 +77,17 @@ def clean(cell):
     return Image.fromarray(a, "RGBA")
 
 
-def tight_square(img, pad_ratio=0.05):
+def bluify(cell):
+    """Repaint the sheet's yellow sun in the accent blue, edge pixels included."""
+    a = np.asarray(cell.convert("RGBA")).copy()
+    r, g, b = a[:, :, 0].astype(int), a[:, :, 1].astype(int), a[:, :, 2].astype(int)
+    yellow = (r - b > 60) & (g - b > 30)
+    for c, v in enumerate(BLUE):
+        a[:, :, c] = np.where(yellow, v, a[:, :, c])
+    return Image.fromarray(a, "RGBA")
+
+
+def tight_square(img, pad_ratio=PAD_RATIO):
     img = img.crop(img.getbbox())
     side = max(img.size) + 2 * int(max(img.size) * pad_ratio)
     sq = Image.new("RGBA", (side, side), (0, 0, 0, 0))
@@ -84,8 +98,11 @@ def tight_square(img, pad_ratio=0.05):
 def main():
     sheet = Image.open(SHEET).convert("RGBA")
     w, h = sheet.size
-    for (row, col), name in MAPPING.items():
-        icon = tight_square(clean(sheet.crop(cell_box(row, col, w, h))))
+    for (row, col), (name, opts) in MAPPING.items():
+        cell = clean(sheet.crop(cell_box(row, col, w, h)))
+        if opts.get("blue"):
+            cell = bluify(cell)
+        icon = tight_square(cell, opts.get("pad", PAD_RATIO))
         icon.save(RES / name)
         print("wrote", RES / name)
 
