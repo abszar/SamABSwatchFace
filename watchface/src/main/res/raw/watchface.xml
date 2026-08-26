@@ -9,14 +9,6 @@
                 <Image resource="@drawable/bg" />
             </PartImage>
 
-            <!-- Seconds bezel dot -->
-            <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" angle="0" name="secondsDot">
-                <Transform target="angle" value="[SECOND] * 6" />
-                <PartDraw x="220" y="2" width="10" height="21">
-                    <RoundRectangle x="0" y="0" width="10" height="21"
-                        cornerRadiusX="5" cornerRadiusY="5"><Fill color="#fffacc15" /></RoundRectangle>
-                </PartDraw>
-            </Group>
 
             <!-- Current weather header -->
             <Condition>
@@ -928,9 +920,9 @@
                         <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
                     </Font></Text>
                 </PartText>
-                <PartText x="0" y="46" width="130" height="20">
+                <PartText x="0" y="46" width="130" height="22">
                     <Text align="CENTER">
-                        <Font family="SYNC_TO_DEVICE" size="16" color="#ff3b82f6">@string/sleep</Font>
+                        <Font family="SYNC_TO_DEVICE" size="18" color="#ff3b82f6">@string/sleep</Font>
                     </Text>
                 </PartText>
             </Complication>
@@ -995,5 +987,14 @@
                 </PartText>
             </Complication>
         </ComplicationSlot>
+        <!-- Seconds bezel tick: last in the scene so it rides over the gauges -->
+        <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" angle="0" name="secondsTick">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Transform target="angle" value="[SECOND] * 6" />
+            <PartDraw x="220" y="2" width="10" height="21">
+                <RoundRectangle x="0" y="0" width="10" height="21"
+                    cornerRadiusX="5" cornerRadiusY="5"><Fill color="#fffacc15" /></RoundRectangle>
+            </PartDraw>
+        </Group>
     </Scene>
 </WatchFace>
