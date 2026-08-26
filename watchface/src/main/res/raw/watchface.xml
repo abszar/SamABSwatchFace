@@ -27,10 +27,17 @@
                         <Expressions>
                         <Expression name="clearDHdr"><![CDATA[([WEATHER.CONDITION] == 1 || [WEATHER.CONDITION] == 8) && [WEATHER.IS_DAY]]]></Expression>
                         <Expression name="clearNHdr"><![CDATA[([WEATHER.CONDITION] == 1 || [WEATHER.CONDITION] == 8) && ![WEATHER.IS_DAY]]]></Expression>
-                        <Expression name="partlyDHdr"><![CDATA[([WEATHER.CONDITION] == 14 || [WEATHER.CONDITION] == 15) && [WEATHER.IS_DAY]]]></Expression>
-                        <Expression name="partlyNHdr"><![CDATA[([WEATHER.CONDITION] == 14 || [WEATHER.CONDITION] == 15) && ![WEATHER.IS_DAY]]]></Expression>
-                        <Expression name="rainHdr"><![CDATA[[WEATHER.CONDITION] == 4 || [WEATHER.CONDITION] == 6 || [WEATHER.CONDITION] == 12]]></Expression>
-                        <Expression name="snowHdr"><![CDATA[[WEATHER.CONDITION] == 5 || [WEATHER.CONDITION] == 7 || [WEATHER.CONDITION] == 10 || [WEATHER.CONDITION] == 11]]></Expression>
+                        <Expression name="partlyDHdr"><![CDATA[[WEATHER.CONDITION] == 14 && [WEATHER.IS_DAY]]]></Expression>
+                        <Expression name="partlyNHdr"><![CDATA[[WEATHER.CONDITION] == 14 && ![WEATHER.IS_DAY]]]></Expression>
+                        <Expression name="fogHdr"><![CDATA[[WEATHER.CONDITION] == 3 || [WEATHER.CONDITION] == 13]]></Expression>
+                        <Expression name="windyHdr"><![CDATA[[WEATHER.CONDITION] == 15]]></Expression>
+                        <Expression name="lightRainHdr"><![CDATA[[WEATHER.CONDITION] == 12]]></Expression>
+                        <Expression name="rainHdr"><![CDATA[[WEATHER.CONDITION] == 6]]></Expression>
+                        <Expression name="heavyRainHdr"><![CDATA[[WEATHER.CONDITION] == 4]]></Expression>
+                        <Expression name="sleetHdr"><![CDATA[[WEATHER.CONDITION] == 10]]></Expression>
+                        <Expression name="lightSnowHdr"><![CDATA[[WEATHER.CONDITION] == 11]]></Expression>
+                        <Expression name="snowHdr"><![CDATA[[WEATHER.CONDITION] == 7]]></Expression>
+                        <Expression name="heavySnowHdr"><![CDATA[[WEATHER.CONDITION] == 5]]></Expression>
                         <Expression name="thunderHdr"><![CDATA[[WEATHER.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDHdr">
@@ -53,14 +60,49 @@
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="fogHdr">
+                            <PartImage x="110" y="32" width="44" height="44">
+                                <Image resource="@drawable/wx_fog" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="windyHdr">
+                            <PartImage x="110" y="32" width="44" height="44">
+                                <Image resource="@drawable/wx_windy" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightRainHdr">
+                            <PartImage x="110" y="32" width="44" height="44">
+                                <Image resource="@drawable/wx_light_rain" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="rainHdr">
                             <PartImage x="110" y="32" width="44" height="44">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="heavyRainHdr">
+                            <PartImage x="110" y="32" width="44" height="44">
+                                <Image resource="@drawable/wx_heavy_rain" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="sleetHdr">
+                            <PartImage x="110" y="32" width="44" height="44">
+                                <Image resource="@drawable/wx_sleet" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightSnowHdr">
+                            <PartImage x="110" y="32" width="44" height="44">
+                                <Image resource="@drawable/wx_light_snow" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="snowHdr">
                             <PartImage x="110" y="32" width="44" height="44">
                                 <Image resource="@drawable/wx_snow" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="heavySnowHdr">
+                            <PartImage x="110" y="32" width="44" height="44">
+                                <Image resource="@drawable/wx_heavy_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderHdr">
@@ -102,10 +144,17 @@
                         <Expressions>
                         <Expression name="clearDFc0"><![CDATA[([WEATHER.CONDITION] == 1 || [WEATHER.CONDITION] == 8) && [WEATHER.IS_DAY]]]></Expression>
                         <Expression name="clearNFc0"><![CDATA[([WEATHER.CONDITION] == 1 || [WEATHER.CONDITION] == 8) && ![WEATHER.IS_DAY]]]></Expression>
-                        <Expression name="partlyDFc0"><![CDATA[([WEATHER.CONDITION] == 14 || [WEATHER.CONDITION] == 15) && [WEATHER.IS_DAY]]]></Expression>
-                        <Expression name="partlyNFc0"><![CDATA[([WEATHER.CONDITION] == 14 || [WEATHER.CONDITION] == 15) && ![WEATHER.IS_DAY]]]></Expression>
-                        <Expression name="rainFc0"><![CDATA[[WEATHER.CONDITION] == 4 || [WEATHER.CONDITION] == 6 || [WEATHER.CONDITION] == 12]]></Expression>
-                        <Expression name="snowFc0"><![CDATA[[WEATHER.CONDITION] == 5 || [WEATHER.CONDITION] == 7 || [WEATHER.CONDITION] == 10 || [WEATHER.CONDITION] == 11]]></Expression>
+                        <Expression name="partlyDFc0"><![CDATA[[WEATHER.CONDITION] == 14 && [WEATHER.IS_DAY]]]></Expression>
+                        <Expression name="partlyNFc0"><![CDATA[[WEATHER.CONDITION] == 14 && ![WEATHER.IS_DAY]]]></Expression>
+                        <Expression name="fogFc0"><![CDATA[[WEATHER.CONDITION] == 3 || [WEATHER.CONDITION] == 13]]></Expression>
+                        <Expression name="windyFc0"><![CDATA[[WEATHER.CONDITION] == 15]]></Expression>
+                        <Expression name="lightRainFc0"><![CDATA[[WEATHER.CONDITION] == 12]]></Expression>
+                        <Expression name="rainFc0"><![CDATA[[WEATHER.CONDITION] == 6]]></Expression>
+                        <Expression name="heavyRainFc0"><![CDATA[[WEATHER.CONDITION] == 4]]></Expression>
+                        <Expression name="sleetFc0"><![CDATA[[WEATHER.CONDITION] == 10]]></Expression>
+                        <Expression name="lightSnowFc0"><![CDATA[[WEATHER.CONDITION] == 11]]></Expression>
+                        <Expression name="snowFc0"><![CDATA[[WEATHER.CONDITION] == 7]]></Expression>
+                        <Expression name="heavySnowFc0"><![CDATA[[WEATHER.CONDITION] == 5]]></Expression>
                         <Expression name="thunderFc0"><![CDATA[[WEATHER.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc0">
@@ -128,14 +177,49 @@
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="fogFc0">
+                            <PartImage x="45" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_fog" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="windyFc0">
+                            <PartImage x="45" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_windy" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightRainFc0">
+                            <PartImage x="45" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_rain" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="rainFc0">
                             <PartImage x="45" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="heavyRainFc0">
+                            <PartImage x="45" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_rain" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="sleetFc0">
+                            <PartImage x="45" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_sleet" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightSnowFc0">
+                            <PartImage x="45" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_snow" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="snowFc0">
                             <PartImage x="45" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="heavySnowFc0">
+                            <PartImage x="45" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc0">
@@ -163,10 +247,17 @@
                         <Expressions>
                         <Expression name="clearDFc1"><![CDATA[([WEATHER.HOURS.1.CONDITION] == 1 || [WEATHER.HOURS.1.CONDITION] == 8) && [WEATHER.HOURS.1.IS_DAY]]]></Expression>
                         <Expression name="clearNFc1"><![CDATA[([WEATHER.HOURS.1.CONDITION] == 1 || [WEATHER.HOURS.1.CONDITION] == 8) && ![WEATHER.HOURS.1.IS_DAY]]]></Expression>
-                        <Expression name="partlyDFc1"><![CDATA[([WEATHER.HOURS.1.CONDITION] == 14 || [WEATHER.HOURS.1.CONDITION] == 15) && [WEATHER.HOURS.1.IS_DAY]]]></Expression>
-                        <Expression name="partlyNFc1"><![CDATA[([WEATHER.HOURS.1.CONDITION] == 14 || [WEATHER.HOURS.1.CONDITION] == 15) && ![WEATHER.HOURS.1.IS_DAY]]]></Expression>
-                        <Expression name="rainFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 4 || [WEATHER.HOURS.1.CONDITION] == 6 || [WEATHER.HOURS.1.CONDITION] == 12]]></Expression>
-                        <Expression name="snowFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 5 || [WEATHER.HOURS.1.CONDITION] == 7 || [WEATHER.HOURS.1.CONDITION] == 10 || [WEATHER.HOURS.1.CONDITION] == 11]]></Expression>
+                        <Expression name="partlyDFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 14 && [WEATHER.HOURS.1.IS_DAY]]]></Expression>
+                        <Expression name="partlyNFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 14 && ![WEATHER.HOURS.1.IS_DAY]]]></Expression>
+                        <Expression name="fogFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 3 || [WEATHER.HOURS.1.CONDITION] == 13]]></Expression>
+                        <Expression name="windyFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 15]]></Expression>
+                        <Expression name="lightRainFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 12]]></Expression>
+                        <Expression name="rainFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 6]]></Expression>
+                        <Expression name="heavyRainFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 4]]></Expression>
+                        <Expression name="sleetFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 10]]></Expression>
+                        <Expression name="lightSnowFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 11]]></Expression>
+                        <Expression name="snowFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 7]]></Expression>
+                        <Expression name="heavySnowFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 5]]></Expression>
                         <Expression name="thunderFc1"><![CDATA[[WEATHER.HOURS.1.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc1">
@@ -189,14 +280,49 @@
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="fogFc1">
+                            <PartImage x="111" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_fog" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="windyFc1">
+                            <PartImage x="111" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_windy" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightRainFc1">
+                            <PartImage x="111" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_rain" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="rainFc1">
                             <PartImage x="111" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="heavyRainFc1">
+                            <PartImage x="111" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_rain" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="sleetFc1">
+                            <PartImage x="111" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_sleet" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightSnowFc1">
+                            <PartImage x="111" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_snow" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="snowFc1">
                             <PartImage x="111" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="heavySnowFc1">
+                            <PartImage x="111" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc1">
@@ -224,10 +350,17 @@
                         <Expressions>
                         <Expression name="clearDFc2"><![CDATA[([WEATHER.HOURS.2.CONDITION] == 1 || [WEATHER.HOURS.2.CONDITION] == 8) && [WEATHER.HOURS.2.IS_DAY]]]></Expression>
                         <Expression name="clearNFc2"><![CDATA[([WEATHER.HOURS.2.CONDITION] == 1 || [WEATHER.HOURS.2.CONDITION] == 8) && ![WEATHER.HOURS.2.IS_DAY]]]></Expression>
-                        <Expression name="partlyDFc2"><![CDATA[([WEATHER.HOURS.2.CONDITION] == 14 || [WEATHER.HOURS.2.CONDITION] == 15) && [WEATHER.HOURS.2.IS_DAY]]]></Expression>
-                        <Expression name="partlyNFc2"><![CDATA[([WEATHER.HOURS.2.CONDITION] == 14 || [WEATHER.HOURS.2.CONDITION] == 15) && ![WEATHER.HOURS.2.IS_DAY]]]></Expression>
-                        <Expression name="rainFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 4 || [WEATHER.HOURS.2.CONDITION] == 6 || [WEATHER.HOURS.2.CONDITION] == 12]]></Expression>
-                        <Expression name="snowFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 5 || [WEATHER.HOURS.2.CONDITION] == 7 || [WEATHER.HOURS.2.CONDITION] == 10 || [WEATHER.HOURS.2.CONDITION] == 11]]></Expression>
+                        <Expression name="partlyDFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 14 && [WEATHER.HOURS.2.IS_DAY]]]></Expression>
+                        <Expression name="partlyNFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 14 && ![WEATHER.HOURS.2.IS_DAY]]]></Expression>
+                        <Expression name="fogFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 3 || [WEATHER.HOURS.2.CONDITION] == 13]]></Expression>
+                        <Expression name="windyFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 15]]></Expression>
+                        <Expression name="lightRainFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 12]]></Expression>
+                        <Expression name="rainFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 6]]></Expression>
+                        <Expression name="heavyRainFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 4]]></Expression>
+                        <Expression name="sleetFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 10]]></Expression>
+                        <Expression name="lightSnowFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 11]]></Expression>
+                        <Expression name="snowFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 7]]></Expression>
+                        <Expression name="heavySnowFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 5]]></Expression>
                         <Expression name="thunderFc2"><![CDATA[[WEATHER.HOURS.2.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc2">
@@ -250,14 +383,49 @@
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="fogFc2">
+                            <PartImage x="177" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_fog" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="windyFc2">
+                            <PartImage x="177" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_windy" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightRainFc2">
+                            <PartImage x="177" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_rain" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="rainFc2">
                             <PartImage x="177" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="heavyRainFc2">
+                            <PartImage x="177" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_rain" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="sleetFc2">
+                            <PartImage x="177" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_sleet" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightSnowFc2">
+                            <PartImage x="177" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_snow" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="snowFc2">
                             <PartImage x="177" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="heavySnowFc2">
+                            <PartImage x="177" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc2">
@@ -285,10 +453,17 @@
                         <Expressions>
                         <Expression name="clearDFc3"><![CDATA[([WEATHER.HOURS.3.CONDITION] == 1 || [WEATHER.HOURS.3.CONDITION] == 8) && [WEATHER.HOURS.3.IS_DAY]]]></Expression>
                         <Expression name="clearNFc3"><![CDATA[([WEATHER.HOURS.3.CONDITION] == 1 || [WEATHER.HOURS.3.CONDITION] == 8) && ![WEATHER.HOURS.3.IS_DAY]]]></Expression>
-                        <Expression name="partlyDFc3"><![CDATA[([WEATHER.HOURS.3.CONDITION] == 14 || [WEATHER.HOURS.3.CONDITION] == 15) && [WEATHER.HOURS.3.IS_DAY]]]></Expression>
-                        <Expression name="partlyNFc3"><![CDATA[([WEATHER.HOURS.3.CONDITION] == 14 || [WEATHER.HOURS.3.CONDITION] == 15) && ![WEATHER.HOURS.3.IS_DAY]]]></Expression>
-                        <Expression name="rainFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 4 || [WEATHER.HOURS.3.CONDITION] == 6 || [WEATHER.HOURS.3.CONDITION] == 12]]></Expression>
-                        <Expression name="snowFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 5 || [WEATHER.HOURS.3.CONDITION] == 7 || [WEATHER.HOURS.3.CONDITION] == 10 || [WEATHER.HOURS.3.CONDITION] == 11]]></Expression>
+                        <Expression name="partlyDFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 14 && [WEATHER.HOURS.3.IS_DAY]]]></Expression>
+                        <Expression name="partlyNFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 14 && ![WEATHER.HOURS.3.IS_DAY]]]></Expression>
+                        <Expression name="fogFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 3 || [WEATHER.HOURS.3.CONDITION] == 13]]></Expression>
+                        <Expression name="windyFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 15]]></Expression>
+                        <Expression name="lightRainFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 12]]></Expression>
+                        <Expression name="rainFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 6]]></Expression>
+                        <Expression name="heavyRainFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 4]]></Expression>
+                        <Expression name="sleetFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 10]]></Expression>
+                        <Expression name="lightSnowFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 11]]></Expression>
+                        <Expression name="snowFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 7]]></Expression>
+                        <Expression name="heavySnowFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 5]]></Expression>
                         <Expression name="thunderFc3"><![CDATA[[WEATHER.HOURS.3.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc3">
@@ -311,14 +486,49 @@
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="fogFc3">
+                            <PartImage x="243" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_fog" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="windyFc3">
+                            <PartImage x="243" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_windy" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightRainFc3">
+                            <PartImage x="243" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_rain" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="rainFc3">
                             <PartImage x="243" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="heavyRainFc3">
+                            <PartImage x="243" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_rain" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="sleetFc3">
+                            <PartImage x="243" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_sleet" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightSnowFc3">
+                            <PartImage x="243" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_snow" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="snowFc3">
                             <PartImage x="243" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="heavySnowFc3">
+                            <PartImage x="243" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc3">
@@ -346,10 +556,17 @@
                         <Expressions>
                         <Expression name="clearDFc4"><![CDATA[([WEATHER.HOURS.4.CONDITION] == 1 || [WEATHER.HOURS.4.CONDITION] == 8) && [WEATHER.HOURS.4.IS_DAY]]]></Expression>
                         <Expression name="clearNFc4"><![CDATA[([WEATHER.HOURS.4.CONDITION] == 1 || [WEATHER.HOURS.4.CONDITION] == 8) && ![WEATHER.HOURS.4.IS_DAY]]]></Expression>
-                        <Expression name="partlyDFc4"><![CDATA[([WEATHER.HOURS.4.CONDITION] == 14 || [WEATHER.HOURS.4.CONDITION] == 15) && [WEATHER.HOURS.4.IS_DAY]]]></Expression>
-                        <Expression name="partlyNFc4"><![CDATA[([WEATHER.HOURS.4.CONDITION] == 14 || [WEATHER.HOURS.4.CONDITION] == 15) && ![WEATHER.HOURS.4.IS_DAY]]]></Expression>
-                        <Expression name="rainFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 4 || [WEATHER.HOURS.4.CONDITION] == 6 || [WEATHER.HOURS.4.CONDITION] == 12]]></Expression>
-                        <Expression name="snowFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 5 || [WEATHER.HOURS.4.CONDITION] == 7 || [WEATHER.HOURS.4.CONDITION] == 10 || [WEATHER.HOURS.4.CONDITION] == 11]]></Expression>
+                        <Expression name="partlyDFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 14 && [WEATHER.HOURS.4.IS_DAY]]]></Expression>
+                        <Expression name="partlyNFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 14 && ![WEATHER.HOURS.4.IS_DAY]]]></Expression>
+                        <Expression name="fogFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 3 || [WEATHER.HOURS.4.CONDITION] == 13]]></Expression>
+                        <Expression name="windyFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 15]]></Expression>
+                        <Expression name="lightRainFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 12]]></Expression>
+                        <Expression name="rainFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 6]]></Expression>
+                        <Expression name="heavyRainFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 4]]></Expression>
+                        <Expression name="sleetFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 10]]></Expression>
+                        <Expression name="lightSnowFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 11]]></Expression>
+                        <Expression name="snowFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 7]]></Expression>
+                        <Expression name="heavySnowFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 5]]></Expression>
                         <Expression name="thunderFc4"><![CDATA[[WEATHER.HOURS.4.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc4">
@@ -372,14 +589,49 @@
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="fogFc4">
+                            <PartImage x="309" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_fog" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="windyFc4">
+                            <PartImage x="309" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_windy" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightRainFc4">
+                            <PartImage x="309" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_rain" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="rainFc4">
                             <PartImage x="309" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="heavyRainFc4">
+                            <PartImage x="309" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_rain" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="sleetFc4">
+                            <PartImage x="309" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_sleet" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightSnowFc4">
+                            <PartImage x="309" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_snow" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="snowFc4">
                             <PartImage x="309" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="heavySnowFc4">
+                            <PartImage x="309" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc4">
@@ -407,10 +659,17 @@
                         <Expressions>
                         <Expression name="clearDFc5"><![CDATA[([WEATHER.HOURS.5.CONDITION] == 1 || [WEATHER.HOURS.5.CONDITION] == 8) && [WEATHER.HOURS.5.IS_DAY]]]></Expression>
                         <Expression name="clearNFc5"><![CDATA[([WEATHER.HOURS.5.CONDITION] == 1 || [WEATHER.HOURS.5.CONDITION] == 8) && ![WEATHER.HOURS.5.IS_DAY]]]></Expression>
-                        <Expression name="partlyDFc5"><![CDATA[([WEATHER.HOURS.5.CONDITION] == 14 || [WEATHER.HOURS.5.CONDITION] == 15) && [WEATHER.HOURS.5.IS_DAY]]]></Expression>
-                        <Expression name="partlyNFc5"><![CDATA[([WEATHER.HOURS.5.CONDITION] == 14 || [WEATHER.HOURS.5.CONDITION] == 15) && ![WEATHER.HOURS.5.IS_DAY]]]></Expression>
-                        <Expression name="rainFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 4 || [WEATHER.HOURS.5.CONDITION] == 6 || [WEATHER.HOURS.5.CONDITION] == 12]]></Expression>
-                        <Expression name="snowFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 5 || [WEATHER.HOURS.5.CONDITION] == 7 || [WEATHER.HOURS.5.CONDITION] == 10 || [WEATHER.HOURS.5.CONDITION] == 11]]></Expression>
+                        <Expression name="partlyDFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 14 && [WEATHER.HOURS.5.IS_DAY]]]></Expression>
+                        <Expression name="partlyNFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 14 && ![WEATHER.HOURS.5.IS_DAY]]]></Expression>
+                        <Expression name="fogFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 3 || [WEATHER.HOURS.5.CONDITION] == 13]]></Expression>
+                        <Expression name="windyFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 15]]></Expression>
+                        <Expression name="lightRainFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 12]]></Expression>
+                        <Expression name="rainFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 6]]></Expression>
+                        <Expression name="heavyRainFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 4]]></Expression>
+                        <Expression name="sleetFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 10]]></Expression>
+                        <Expression name="lightSnowFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 11]]></Expression>
+                        <Expression name="snowFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 7]]></Expression>
+                        <Expression name="heavySnowFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 5]]></Expression>
                         <Expression name="thunderFc5"><![CDATA[[WEATHER.HOURS.5.CONDITION] == 9]]></Expression>
                         </Expressions>
                         <Compare expression="clearDFc5">
@@ -433,14 +692,49 @@
                                 <Image resource="@drawable/wx_night_cloud" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="fogFc5">
+                            <PartImage x="375" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_fog" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="windyFc5">
+                            <PartImage x="375" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_windy" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightRainFc5">
+                            <PartImage x="375" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_rain" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="rainFc5">
                             <PartImage x="375" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_rain" />
                             </PartImage>
                         </Compare>
+                        <Compare expression="heavyRainFc5">
+                            <PartImage x="375" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_rain" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="sleetFc5">
+                            <PartImage x="375" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_sleet" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="lightSnowFc5">
+                            <PartImage x="375" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_light_snow" />
+                            </PartImage>
+                        </Compare>
                         <Compare expression="snowFc5">
                             <PartImage x="375" y="308" width="30" height="30">
                                 <Image resource="@drawable/wx_snow" />
+                            </PartImage>
+                        </Compare>
+                        <Compare expression="heavySnowFc5">
+                            <PartImage x="375" y="308" width="30" height="30">
+                                <Image resource="@drawable/wx_heavy_snow" />
                             </PartImage>
                         </Compare>
                         <Compare expression="thunderFc5">

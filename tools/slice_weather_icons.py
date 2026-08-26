@@ -28,9 +28,16 @@ MAPPING = {
     (0, 0): ("wx_clear.png", {}),                        # sun
     (0, 2): ("wx_partly.png", {"pad": 0.0, "blue": True}),  # big cloud + sun
     (0, 3): ("wx_cloudy.png", {}),                       # plain cloud
+    (0, 5): ("wx_fog.png", {}),                          # cloud + fog bars
+    (1, 0): ("wx_light_rain.png", {}),                   # cloud + one drop
     (1, 1): ("wx_rain.png", {}),                         # cloud + two drops
-    (1, 5): ("wx_snow.png", {}),                         # cloud + snowflakes
+    (1, 2): ("wx_heavy_rain.png", {}),                   # cloud + three drops
+    (1, 3): ("wx_sleet.png", {}),                        # cloud + drop + flake
+    (1, 4): ("wx_snow.png", {}),                         # cloud + two flakes
+    (1, 5): ("wx_heavy_snow.png", {}),                   # cloud + three flakes
+    (2, 0): ("wx_light_snow.png", {}),                   # cloud + snow specks
     (2, 2): ("wx_thunder.png", {}),                      # cloud + bolt + drop
+    (2, 5): ("wx_windy.png", {}),                        # wind swirls
     (3, 3): ("wx_night.png", {}),                        # crescent + sparkles
     (3, 5): ("wx_night_cloud.png", {}),                  # crescent + cloud
 }
