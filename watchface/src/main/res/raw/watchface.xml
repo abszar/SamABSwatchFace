@@ -12,8 +12,9 @@
             <!-- Seconds bezel dot -->
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" angle="0" name="secondsDot">
                 <Transform target="angle" value="[SECOND] * 6" />
-                <PartDraw x="217" y="4" width="16" height="16">
-                    <Ellipse x="0" y="0" width="16" height="16"><Fill color="#fffacc15" /></Ellipse>
+                <PartDraw x="222" y="2" width="6" height="20">
+                    <RoundRectangle x="0" y="0" width="6" height="20"
+                        cornerRadiusX="3" cornerRadiusY="3"><Fill color="#fffacc15" /></RoundRectangle>
                 </PartDraw>
             </Group>
 
