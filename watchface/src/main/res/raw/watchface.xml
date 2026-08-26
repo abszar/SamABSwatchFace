@@ -1209,18 +1209,18 @@
             <Variant mode="AMBIENT" target="alpha" value="150" />
             <TimeText format="hh" hourFormat="SYNC_TO_DEVICE" align="END"
                 x="0" y="0" width="206" height="150">
-                <Font family="anton" size="140" color="#ff3b82f6" />
+                <Font family="clockdigits" size="140" color="#ff3b82f6" />
             </TimeText>
             <TimeText format="mm" align="START"
                 x="244" y="0" width="206" height="150">
-                <Font family="anton" size="140" color="#ffffffff" />
+                <Font family="clockdigits" size="140" color="#ffffffff" />
             </TimeText>
         </DigitalClock>
         <DigitalClock x="0" y="100" width="450" height="150">
             <Variant mode="AMBIENT" target="alpha" value="0" />
             <TimeText format="ss" align="START"
                 x="389" y="100" width="57" height="42">
-                <Font family="anton" size="32" color="#ff3b82f6" />
+                <Font family="clockdigits" size="32" color="#ff3b82f6" />
             </TimeText>
         </DigitalClock>
         <PartDraw x="215" y="148" width="20" height="60">
